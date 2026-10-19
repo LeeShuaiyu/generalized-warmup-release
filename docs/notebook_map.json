@@ -1,0 +1,41 @@
+{
+  "main_random": [
+    "main_random",
+    "s4_main"
+  ],
+  "main_pretrained": [
+    "main_pretrained",
+    "s5_pretrained"
+  ],
+  "main_compatibility": [
+    "main_compatibility",
+    "s6_training",
+    "s6_posthoc"
+  ],
+  "s2_initialization": [
+    "s2_initialization"
+  ],
+  "s2_direction": [
+    "s2_direction"
+  ],
+  "s3_noise": [
+    "s3_noise",
+    "s3_interaction"
+  ],
+  "s4_fit": [
+    "s4_fit"
+  ],
+  "s4_family": [
+    "s4_family"
+  ],
+  "s7_length": [
+    "s7_length"
+  ],
+  "paper_figures": [
+    "paper_figures"
+  ],
+  "cifar100": [
+    "s2_cifar10",
+    "s2_cifar3"
+  ]
+}

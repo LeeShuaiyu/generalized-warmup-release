@@ -1,0 +1,15 @@
+# Python 3.12.4; package versions used for the recorded RTX 3090 evaluations.
+--extra-index-url https://download.pytorch.org/whl/cu121
+numpy==2.3.3
+pandas==2.3.2
+matplotlib==3.10.6
+Pillow==11.3.0
+scipy==1.16.2
+tifffile==2026.8.16
+imagecodecs==2026.8.16
+nbformat==5.10.4
+nbclient==0.10.0
+nbconvert==7.16.4
+ipykernel==6.29.4
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121

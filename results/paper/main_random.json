@@ -1,0 +1,223 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)"
+  ],
+  "precision": {
+    "ECE (%)": 3,
+    "Accuracy (%)": 3
+  },
+  "rows": [
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        4.928,
+        0.918
+      ],
+      "Accuracy (%)": [
+        65.878,
+        1.459
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        4.457,
+        1.039
+      ],
+      "Accuracy (%)": [
+        66.814,
+        1.099
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "DenseNet-121",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        5.801,
+        1.633
+      ],
+      "Accuracy (%)": [
+        66.215,
+        1.576
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "DenseNet-121",
+        "GW"
+      ],
+      "ECE (%)": [
+        4.088,
+        0.686
+      ],
+      "Accuracy (%)": [
+        66.33,
+        1.409
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "ResNet-18",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        2.168,
+        0.917
+      ],
+      "Accuracy (%)": [
+        93.283,
+        0.716
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        1.542,
+        0.457
+      ],
+      "Accuracy (%)": [
+        93.508,
+        0.633
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "DenseNet-121",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        1.826,
+        0.894
+      ],
+      "Accuracy (%)": [
+        93.617,
+        0.642
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "DenseNet-121",
+        "GW"
+      ],
+      "ECE (%)": [
+        1.495,
+        0.514
+      ],
+      "Accuracy (%)": [
+        93.793,
+        0.809
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        9.595,
+        2.275
+      ],
+      "Accuracy (%)": [
+        81.644,
+        2.476
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        7.43,
+        2.714
+      ],
+      "Accuracy (%)": [
+        80.856,
+        3.658
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-34",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        8.595,
+        1.844
+      ],
+      "Accuracy (%)": [
+        80.377,
+        4.107
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-34",
+        "GW"
+      ],
+      "ECE (%)": [
+        5.482,
+        1.097
+      ],
+      "Accuracy (%)": [
+        83.048,
+        3.647
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-50",
+        "Standard training"
+      ],
+      "ECE (%)": [
+        7.245,
+        1.551
+      ],
+      "Accuracy (%)": [
+        81.575,
+        3.041
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-50",
+        "GW"
+      ],
+      "ECE (%)": [
+        6.847,
+        1.519
+      ],
+      "Accuracy (%)": [
+        80.137,
+        2.08
+      ]
+    }
+  ],
+  "paper_label": "tab:main-random"
+}

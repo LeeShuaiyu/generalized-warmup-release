@@ -1,0 +1,28 @@
+{
+  "experiment": "toy1",
+  "protocol_sha256": "9c69b9887bf8659192f8436171beb453a8134dcea5acd1b8e5d975eb2421e57d",
+  "implementation_sha256": "dc4084ae4547e22d51983c83cc50275ed499ccb5f4841cc4d0a4964f366043bd",
+  "seeds": [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129],
+  "dimensions": [2, 10, 10, 2],
+  "warmup": {
+    "seed_offset": 1,
+    "steps": 12000,
+    "snapshot_steps": [0, 250, 1000, 3000, 6000, 12000],
+    "batch_size": 2048,
+    "inputs": "fresh_uniform_minus10_plus10",
+    "labels": "exactly_balanced_random_hard_labels",
+    "optimizer": "Adam",
+    "learning_rate": 0.0008,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8
+  },
+  "evaluation": {
+    "point_seed": 20260709,
+    "points": 10000,
+    "domain": [-10.0, 10.0],
+    "directions": 32,
+    "response_epsilon": 1e-12
+  },
+  "backend": "numpy_float64_cpu"
+}

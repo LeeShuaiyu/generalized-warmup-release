@@ -1,0 +1,53 @@
+{
+  "datasets": [
+    {
+      "id": "opensar",
+      "label": "OpenSARShip2",
+      "source_id": "opensarship2_grd3",
+      "manifest": "data/manifests/opensar.csv",
+      "semantic_sha256": "4ecae002aacc95f4807ff690f90825388b3bb9de325e18fb539dbaf65a7df66b",
+      "source_directory": "data/processed/opensar",
+      "rule": "sar_homogeneous",
+      "expected_bank": "artifacts/fit/opensar/bank.npz",
+      "expected_records": "artifacts/fit/opensar/records.json"
+    },
+    {
+      "id": "sar",
+      "label": "Schwegmann SAR",
+      "source_id": "sar_dataset_window21",
+      "manifest": "data/manifests/sar.csv",
+      "semantic_sha256": "012bff41ae6b4787a3988e7d99b9f37787a2b81ebadb8f3daaab4474f1a73692",
+      "source_directory": "data/processed/sar",
+      "rule": "sar_homogeneous",
+      "expected_bank": "artifacts/fit/sar/bank.npz",
+      "expected_records": "artifacts/fit/sar/records.json"
+    },
+    {
+      "id": "fusar",
+      "label": "FUSAR-Ship",
+      "source_id": "fusar_ship_paper5_proxy",
+      "manifest": "data/manifests/fusar_fit.csv",
+      "semantic_sha256": "e94963b52300b1272577d4d224ce28f848dc66cc8bc776717614862f297294bd",
+      "source_directory": "data/raw/FUSAR-Ship",
+      "rule": "sar_homogeneous",
+      "expected_bank": "artifacts/fit/fusar/bank.npz",
+      "expected_records": "artifacts/fit/fusar/records.json"
+    },
+    {
+      "id": "oct",
+      "label": "OCTDL",
+      "source_id": "oct_background",
+      "manifest": "data/manifests/oct.csv",
+      "semantic_sha256": "6bb799a390d2243ff3e3488cf18c31b4e3569ca32247971b7bf612271f89bf07",
+      "source_directory": "data/processed/oct",
+      "rule": "oct_background",
+      "expected_bank": "artifacts/fit/oct/bank.npz",
+      "expected_records": "artifacts/fit/oct/records.json"
+    }
+  ],
+  "files": "data/region_files.json",
+  "split": "train",
+  "block_size": 16,
+  "oct_group_rule": "lowest score per group; first encountered tie",
+  "sar_image_rule": "lowest score per image; first raster-order tie"
+}

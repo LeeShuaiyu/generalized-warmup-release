@@ -1,0 +1,193 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)"
+  ],
+  "precision": {
+    "ECE (%)": 3,
+    "Accuracy (%)": 2
+  },
+  "rows": [
+    {
+      "key": [
+        "Schwegmann SAR",
+        "DenseNet-121",
+        "Standard fine-tuning"
+      ],
+      "ECE (%)": [
+        5.146,
+        0.442
+      ],
+      "Accuracy (%)": [
+        92.41,
+        0.65
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "DenseNet-121",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        5.013,
+        0.629
+      ],
+      "Accuracy (%)": [
+        92.49,
+        0.54
+      ]
+    },
+    {
+      "key": [
+        "Schwegmann SAR",
+        "DenseNet-121",
+        "GW"
+      ],
+      "ECE (%)": [
+        4.396,
+        0.992
+      ],
+      "Accuracy (%)": [
+        92.69,
+        0.66
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "Standard fine-tuning"
+      ],
+      "ECE (%)": [
+        5.134,
+        1.017
+      ],
+      "Accuracy (%)": [
+        63.81,
+        1.39
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        4.102,
+        1.377
+      ],
+      "Accuracy (%)": [
+        66.94,
+        1.05
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        3.996,
+        1.131
+      ],
+      "Accuracy (%)": [
+        66.83,
+        1.09
+      ]
+    },
+    {
+      "key": [
+        "FUSAR-Ship-5 proxy",
+        "VGG-16",
+        "Standard fine-tuning"
+      ],
+      "ECE (%)": [
+        16.224,
+        4.945
+      ],
+      "Accuracy (%)": [
+        71.02,
+        2.27
+      ]
+    },
+    {
+      "key": [
+        "FUSAR-Ship-5 proxy",
+        "VGG-16",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        14.97,
+        4.602
+      ],
+      "Accuracy (%)": [
+        70.25,
+        2.97
+      ]
+    },
+    {
+      "key": [
+        "FUSAR-Ship-5 proxy",
+        "VGG-16",
+        "GW"
+      ],
+      "ECE (%)": [
+        12.01,
+        1.618
+      ],
+      "Accuracy (%)": [
+        69.24,
+        4.04
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "Swin-Tiny",
+        "Standard fine-tuning"
+      ],
+      "ECE (%)": [
+        7.425,
+        1.004
+      ],
+      "Accuracy (%)": [
+        89.35,
+        1.22
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "Swin-Tiny",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        7.002,
+        1.881
+      ],
+      "Accuracy (%)": [
+        89.38,
+        1.09
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "Swin-Tiny",
+        "GW"
+      ],
+      "ECE (%)": [
+        6.3,
+        1.258
+      ],
+      "Accuracy (%)": [
+        89.93,
+        1.16
+      ]
+    }
+  ],
+  "paper_label": "tab:main-pretrained"
+}

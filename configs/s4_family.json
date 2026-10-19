@@ -1,0 +1,26 @@
+{
+  "experiment_id": "s4_family",
+  "paper_label": "tab:warmup-family-ablation",
+  "dataset": "OpenSARShip2",
+  "architecture": "densenet121_gray",
+  "num_classes": 3,
+  "image_size": 128,
+  "evaluation_split": "val",
+  "evaluation_samples": 954,
+  "seeds": [20262001, 20262002, 20262003, 20262004, 20262005],
+  "warmup_epochs": 5,
+  "supervised_epochs": 50,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "optimizer": "AdamW",
+  "checkpoint_metric": "validation_nll",
+  "ece_bins": 15,
+  "manifest_sha256": "4ecae002aacc95f4807ff690f90825388b3bb9de325e18fb539dbaf65a7df66b",
+  "conditions": [
+    {"id": "gw", "label": "GW", "source_arm": "fit_gamma", "family": "loggamma", "shape": 2.373805936071085, "p": 0.5, "rho": 0.5},
+    {"id": "gaussian", "label": "Gaussian", "source_arm": "fit_log_gaussian", "family": "normal_residual", "p": 0.5, "rho": 0.5},
+    {"id": "uniform", "label": "Uniform", "source_arm": "uniform_residual", "family": "uniform_residual", "p": 0.5, "rho": 0.5},
+    {"id": "laplace", "label": "Laplace", "source_arm": "laplace_residual", "family": "laplace_residual", "p": 0.5, "rho": 0.5}
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "experiment_id": "s7_length",
+  "paper_label": "tab:warmup-length",
+  "dataset": "OpenSARShip2",
+  "architecture": "resnet18_gray",
+  "num_classes": 3,
+  "image_size": 128,
+  "evaluation_split": "val",
+  "evaluation_samples": 954,
+  "seeds": [
+    20262101,
+    20262102,
+    20262103
+  ],
+  "supervised_epochs": 50,
+  "batch_size": 128,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "checkpoint_metric": "validation_nll",
+  "ece_bins": 15,
+  "manifest_sha256": "4ecae002aacc95f4807ff690f90825388b3bb9de325e18fb539dbaf65a7df66b",
+  "normalization": {
+    "mean": 0.034082356840372086,
+    "std": 0.1254398226737976
+  },
+  "conditions": [
+    {
+      "id": "w00",
+      "label": "0",
+      "warmup_epochs": 0,
+      "family": "erm",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w01",
+      "label": "1",
+      "warmup_epochs": 1,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w02",
+      "label": "2",
+      "warmup_epochs": 2,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w03",
+      "label": "3",
+      "warmup_epochs": 3,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w04",
+      "label": "4",
+      "warmup_epochs": 4,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w05",
+      "label": "5",
+      "warmup_epochs": 5,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w06",
+      "label": "6",
+      "warmup_epochs": 6,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w07",
+      "label": "7",
+      "warmup_epochs": 7,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w08",
+      "label": "8",
+      "warmup_epochs": 8,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w09",
+      "label": "9",
+      "warmup_epochs": 9,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    },
+    {
+      "id": "w10",
+      "label": "10",
+      "warmup_epochs": 10,
+      "family": "loggamma",
+      "shape": 1.0,
+      "p": 0.5,
+      "rho": 0.25
+    }
+  ]
+}

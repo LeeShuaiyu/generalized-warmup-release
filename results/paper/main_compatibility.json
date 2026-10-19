@@ -1,0 +1,183 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)"
+  ],
+  "precision": {
+    "ECE (%)": 3,
+    "Accuracy (%)": 2
+  },
+  "rows": [
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        5.04,
+        1.28
+      ],
+      "Accuracy (%)": [
+        66.77,
+        0.9
+      ],
+      "precision": {
+        "ECE (%)": 2,
+        "Accuracy (%)": 2
+      }
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "Label smoothing"
+      ],
+      "ECE (%)": [
+        4.48,
+        2.12
+      ],
+      "Accuracy (%)": [
+        66.63,
+        0.26
+      ],
+      "precision": {
+        "ECE (%)": 2,
+        "Accuracy (%)": 2
+      }
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW + Label smoothing"
+      ],
+      "ECE (%)": [
+        4.12,
+        0.9
+      ],
+      "Accuracy (%)": [
+        65.4,
+        2.03
+      ],
+      "precision": {
+        "ECE (%)": 2,
+        "Accuracy (%)": 2
+      }
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "MMCE"
+      ],
+      "ECE (%)": [
+        5.33,
+        1.32
+      ],
+      "Accuracy (%)": [
+        65.47,
+        1.01
+      ],
+      "precision": {
+        "ECE (%)": 2,
+        "Accuracy (%)": 2
+      }
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW + MMCE"
+      ],
+      "ECE (%)": [
+        4.58,
+        1.55
+      ],
+      "Accuracy (%)": [
+        67.05,
+        1.06
+      ],
+      "precision": {
+        "ECE (%)": 2,
+        "Accuracy (%)": 2
+      }
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        7.804,
+        3.551
+      ],
+      "Accuracy (%)": [
+        82.42,
+        1.69
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "Standard training + TS"
+      ],
+      "ECE (%)": [
+        5.765,
+        1.991
+      ],
+      "Accuracy (%)": [
+        79.91,
+        1.69
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "GW + TS"
+      ],
+      "ECE (%)": [
+        5.844,
+        1.083
+      ],
+      "Accuracy (%)": [
+        82.42,
+        1.69
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "Standard training + VS"
+      ],
+      "ECE (%)": [
+        5.836,
+        0.636
+      ],
+      "Accuracy (%)": [
+        82.88,
+        2.14
+      ]
+    },
+    {
+      "key": [
+        "OCTDL",
+        "ResNet-18",
+        "GW + VS"
+      ],
+      "ECE (%)": [
+        3.878,
+        0.252
+      ],
+      "Accuracy (%)": [
+        84.47,
+        0.99
+      ]
+    }
+  ],
+  "paper_label": "tab:main-compatibility"
+}

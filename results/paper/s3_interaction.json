@@ -1,0 +1,20 @@
+{
+  "table": "Supplementary Note S3, interaction table",
+  "rows": {
+    "Gaussian domain": {
+      "mean": 0.0696,
+      "low": -0.0331,
+      "high": 0.1723
+    },
+    "LogGamma domain": {
+      "mean": -0.0423,
+      "low": -0.1506,
+      "high": 0.066
+    },
+    "Interaction": {
+      "mean": -0.1119,
+      "low": -0.2212,
+      "high": -0.0026
+    }
+  }
+}

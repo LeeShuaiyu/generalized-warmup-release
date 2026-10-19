@@ -1,0 +1,80 @@
+{
+  "experiment_id": "s2_direction",
+  "paper_label": "tab:figure3-response",
+  "protocol": {
+    "protocol_version": "real-ce-directional-residual-v3-hierarchical-rng",
+    "suite_name": "primary",
+    "rng_mode": "formal",
+    "seed_base": 20270810,
+    "seeds": 100,
+    "mlp_seeds": 30,
+    "input_dim": 8,
+    "classes": 2,
+    "semantic_mean": 1.0,
+    "semantic_std": 1.0,
+    "train_var_w": 1.0,
+    "coverage_v_grid": [
+      0.1
+    ],
+    "primary_coverage_v": 0.1,
+    "reference_var_w": 1.0,
+    "reference_var_v": 1.0,
+    "shifted_var_v": 4.0,
+    "warmup_q_high": 4.0,
+    "warmup_q_low": 0.25,
+    "warmup_steps": 500,
+    "supervised_horizons": [
+      0,
+      10,
+      25,
+      50,
+      100,
+      250,
+      500,
+      1000
+    ],
+    "primary_horizon": 1000,
+    "batch_size": 2048,
+    "eval_size": 8192,
+    "linear_init_scale": 0.05,
+    "linear_lr": 0.01,
+    "mlp_hidden": 32,
+    "mlp_lr": 0.001,
+    "mlp_batch_size": 512,
+    "mlp_warmup_steps": 1000,
+    "mlp_supervised_horizons": [
+      0,
+      10,
+      25,
+      50,
+      100,
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "mlp_primary_horizon": 2000,
+    "mlp_probe_size": 4096,
+    "trace_stride": 25,
+    "architectures": [
+      "linear",
+      "mlp_tanh"
+    ],
+    "methods": [
+      "targeted_v",
+      "wrong_w",
+      "isotropic_wv",
+      "no_warmup"
+    ],
+    "log_epsilon": 1e-12,
+    "bootstrap_repetitions": 10000,
+    "intervention_alphas": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "strict_finite_batch_label_invariance": true
+  }
+}

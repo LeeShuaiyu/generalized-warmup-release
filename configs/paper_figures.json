@@ -1,0 +1,103 @@
+{
+  "submission_date": "2026-10-18",
+  "figures": [
+    {
+      "number": 1,
+      "title": "Class-invariant directions",
+      "caption_latex": "Class-invariant directions and model responses. (a) A class-invariant direction $v$ and a class-relevant direction $u$ near input $x$. (b) True conditional class-probability contours in the local $u,v$ plane of a binary task. Direction $v$ is tangent to a contour at $x$, satisfying $D_v\\eta(x)=0$. (c) Model probability contours in the same plane. Predictions can have a non-zero first-order change along $v$.",
+      "assets": [
+        {
+          "path": "assets/submitted/figure1.png",
+          "bytes": 871611,
+          "sha256": "b073ca0eaa00d38c2f6d1853ccd269672809e05716210e5fd962ab19d8f69814"
+        }
+      ],
+      "source": {
+        "submitted_pdf_sha256": "382f3aa4c033f726a7227d6422d899d06a95488f124dceddfe859d0cd7e179dd",
+        "page": 3,
+        "top_origin_crop_pdf_points": [
+          69,
+          102,
+          526,
+          242
+        ]
+      },
+      "quantitative_components": []
+    },
+    {
+      "number": 2,
+      "title": "Warm-up responses and subsequent calibration",
+      "caption_latex": "Uniform-target warm-up suppresses local responses and influences subsequent calibration. \\textbf{a}, Maximum predicted class probabilities before and after warm-up for one model; $\\bar c$ denotes mean confidence over the displayed space. \\textbf{b,c}, Pointwise confidence bias and local response across 30 paired initializations. Pale grey points and lines show individual pairs; large open markers show arithmetic means in b and geometric mean response norms in c (logarithmic axis), with grey and purple edges denoting initialization and warm-up, respectively. \\textbf{d,e}, Eight-dimensional binary-task geometry and its projections: $u$ is class-relevant and $v,w$ are class-invariant; class overlap is omitted and dashed lines mark Bayes decision-boundary sections. \\textbf{f}, Analytic Gaussian densities with equal covariance eigenvalues and larger variance along $w$ (top) or $v$ (bottom). \\textbf{g}, Post-warm-up squared response norms along $w$ (left) and $v$ (right); grey squares and blue circles denote warm-up along $w$ and $v$, respectively. Small markers show seeds and lines join paired conditions; large open markers and error bars show geometric means and 95\\% paired bootstrap intervals. \\textbf{h}, Responses along $v$ during supervised training for the same warm-up conditions; lines and shading show geometric means and pointwise 95\\% paired bootstrap intervals. Panels g,h use 100 paired initializations and logarithmic axes for $R+\\epsilon$ ($\\epsilon=10^{-12}$). \\textbf{i}, CIFAR-100 validation ECE: grey and purple denote training without and with warm-up; lines and shading show means and min--max ranges across the first three initializations. \\textbf{j}, Reliability diagram pooling their final test predictions. Selection rules and complete results are given in Methods and Supplementary Note S2.",
+      "assets": [
+        {
+          "path": "assets/submitted/figure2.png",
+          "bytes": 739931,
+          "sha256": "fb3b846626e241224b05b86791a65c99fae03d759e2833b74d30f1116b663145"
+        }
+      ],
+      "source": {
+        "submitted_pdf_sha256": "382f3aa4c033f726a7227d6422d899d06a95488f124dceddfe859d0cd7e179dd",
+        "page": 5,
+        "top_origin_crop_pdf_points": [
+          69,
+          68,
+          526,
+          558
+        ]
+      },
+      "quantitative_components": [
+        2,
+        3
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Image fluctuation statistics and warm-up calibration",
+      "caption_latex": "Image fluctuation statistics and warm-up calibration. \\textbf{a}, Illustration of Gaussian and Gamma-based noise for the EuroSAT experiment ($L=0.15$ for the Gamma-based illustration; experiments use $L=4$). \\textbf{b}, EuroSAT test ECE for Gaussian and Gamma-based warm-up in each noise domain; bars and error bars show means and two-sided 95\\% $t$ confidence intervals across ten paired initializations. \\textbf{c}, A representative approximately homogeneous OpenSARShip2 region and its magnification. \\textbf{d}, Empirical relative intensities and fitted candidate distributions. \\textbf{e}, Validation ECE of DenseNet-121 for the corresponding warm-up constructions; bars and error bars show means and sample standard deviations across five paired runs. Checkpoints are selected by validation NLL. Input construction and complete results are given in Methods and Supplementary Notes S3 and S4.",
+      "assets": [
+        {
+          "path": "assets/submitted/figure3.png",
+          "bytes": 527325,
+          "sha256": "8ba9c0c6f1db1cca5a5203bba71fdbab1def30198a1771a6a800ef9a177929dc"
+        }
+      ],
+      "source": {
+        "submitted_pdf_sha256": "382f3aa4c033f726a7227d6422d899d06a95488f124dceddfe859d0cd7e179dd",
+        "page": 6,
+        "top_origin_crop_pdf_points": [
+          69,
+          298,
+          526,
+          601
+        ]
+      },
+      "quantitative_components": [
+        4,
+        6
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Generalized warm-up workflow",
+      "caption_latex": "Statistics estimation, input construction and training in generalized warm-up. Relative intensity fluctuations from approximately homogeneous training-image regions guide distribution fitting and construction of the statistics-guided component. Each input retains a Gaussian base, with the statistics-guided component added at a specified probability and strength. Uniform-target warm-up precedes supervised learning on labelled data. The statistics-guided component is schematic.",
+      "assets": [
+        {
+          "path": "assets/submitted/figure4.png",
+          "bytes": 628347,
+          "sha256": "e203982d420e8373077b216bc4e312037ea8d4909b078759b239b04d88c12b17"
+        }
+      ],
+      "source": {
+        "submitted_pdf_sha256": "382f3aa4c033f726a7227d6422d899d06a95488f124dceddfe859d0cd7e179dd",
+        "page": 7,
+        "top_origin_crop_pdf_points": [
+          69,
+          454,
+          526,
+          670
+        ]
+      },
+      "quantitative_components": []
+    }
+  ]
+}

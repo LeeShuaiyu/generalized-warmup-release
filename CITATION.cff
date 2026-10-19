@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this software when using the paper's reproduction code."
+type: software
+title: "Generalized warm-up for confidence calibration of deep neural network classifiers"
+version: 0.1.0.dev0
+authors:
+  - family-names: Li
+    given-names: Shuai-Yu
+  - family-names: Wang
+    given-names: Xin-Chao
+  - family-names: Song
+    given-names: Yu-Ying
+  - family-names: Chen
+    given-names: Si-Wei

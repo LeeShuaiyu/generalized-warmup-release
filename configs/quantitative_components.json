@@ -1,0 +1,92 @@
+{
+  "figures": [
+    {
+      "number": 1,
+      "title": "Class-invariant directions",
+      "caption": "Class-invariant directions and model responses. (a) A class-invariant direction $v$ and a class-relevant direction $u$ near input $x$. (b) True conditional class-probability contours in the local $u,v$ plane of a binary task. Direction $v$ is tangent to a contour at $x$, satisfying $D_v\\eta(x)=0$. (c) Model probability contours in the same plane. Predictions can have a non-zero first-order change along $v$.",
+      "assets": [
+        {
+          "path": "assets/paper/fig1a.png",
+          "sha256": "b9d275404df4c7991a24f58c6412f625d0b57e74ac949339bbb1ecf4d359ca7f",
+          "bytes": 4416314
+        },
+        {
+          "path": "assets/paper/fig1b.png",
+          "sha256": "399cdb49393b460c1adc6649d8888b76d2fa7570693ef590987e40f4d270a257",
+          "bytes": 985978
+        },
+        {
+          "path": "assets/paper/fig1c.png",
+          "sha256": "f9bfc172ae377ceac827cfa20a43f2ba49fbe472f9eaefb6d7f0b929471a4559",
+          "bytes": 1192703
+        }
+      ],
+      "role": "schematic"
+    },
+    {
+      "number": 2,
+      "title": "Initialization and warm-up",
+      "caption": "Uniform-target warm-up changes initial states and subsequent calibration. (a,b) Maximum predicted class probabilities before and after warm-up for one model; $\\bar c$ is mean confidence over the displayed space. (c,d) Mean pointwise confidence bias and local response across 30 paired initializations. Grey points and lines show individual pairs; black open markers show the arithmetic mean in c and geometric mean response norm in d (logarithmic axis). (e) CIFAR-100 validation ECE: lines and shading show means and min--max ranges across the first three archived initializations. (f) Reliability diagram pooling their final test predictions. Selection rules and complete results are given in Methods and Supplementary Note S2.",
+      "assets": [
+        {
+          "path": "assets/paper/fig2_warmup_mechanism.png",
+          "sha256": "7d9057cb728a30430f347fc486c7c2da4cbe6a748887c26c43f78a8b3a8c7644",
+          "bytes": 2416625
+        }
+      ],
+      "role": "experiment"
+    },
+    {
+      "number": 3,
+      "title": "Directional coverage",
+      "caption": "Directional warm-up coverage and local responses during training. (a) Eight-dimensional binary-task geometry: $u$ is class-relevant and $v,w$ are class-invariant; class overlap is omitted and dashed lines mark Bayes decision-boundary sections. (b) Analytic Gaussian densities in the $v$--$w$ plane with equal covariance eigenvalues and larger variance along $w$ (top) or $v$ (bottom). (c) Post-warm-up squared response norms $R$ along $w$ (left) and $v$ (right). Small markers denote seeds and lines join paired conditions; large open markers and error bars show geometric means and 95\\% paired bootstrap intervals. (d) Responses along $v$ during supervised training; lines and shading show geometric means and pointwise 95\\% paired bootstrap intervals. Panels c,d use 100 paired initializations and logarithmic axes for $R+\\epsilon$ ($\\epsilon=10^{-12}$). See Methods and Supplementary Note S2.",
+      "assets": [
+        {
+          "path": "assets/paper/fig3_direction_warmup.png",
+          "sha256": "34a7132b852cdf873ea9067346f4c9ad019ceed5cfa6576fcfa2eab937939140",
+          "bytes": 2320589
+        }
+      ],
+      "role": "experiment"
+    },
+    {
+      "number": 4,
+      "title": "Optical noise domains",
+      "caption": "Image-noise statistics and relative warm-up calibration performance. Left, UC Merced imagery and illustrative Gaussian and LogGamma noise densities ($L=0.15$ for LogGamma; experiments used $L=4$). Right, EuroSAT test ECE for Gaussian warm-up and GW in each noise domain. Bars and error bars show means and two-sided 95\\% $t$ confidence intervals across ten paired initializations. Input construction and cross-domain comparisons are described in Methods and Supplementary Note S3.",
+      "assets": [
+        {
+          "path": "assets/paper/eurosat_noise_matching.png",
+          "sha256": "adcfd8ceb9347ef21b4c4ccc0da45b8c664016a197ae69ae78c5177520a8eb45",
+          "bytes": 985191
+        }
+      ],
+      "role": "experiment"
+    },
+    {
+      "number": 5,
+      "title": "GW workflow",
+      "caption": "Statistics estimation, input construction and training in GW. Relative intensity fluctuations from approximately homogeneous training-image regions guide distribution fitting and construction of the statistics-guided component. Each input retains a Gaussian base, with the statistics-guided component added at a specified probability and strength. Uniform-target warm-up precedes supervised learning on labelled data. The statistics-guided component is schematic.",
+      "assets": [
+        {
+          "path": "assets/paper/gw_statistics_framework_latest.png",
+          "sha256": "f9109f8e69190b894c0d677060a3ccf725f520c8d326acb205f3e2de129e8286",
+          "bytes": 4495098
+        }
+      ],
+      "role": "schematic"
+    },
+    {
+      "number": 6,
+      "title": "Local distribution fits",
+      "caption": "Local fluctuation fits and calibration of the corresponding warm-up constructions. Left, a representative approximately homogeneous OpenSARShip2 region and its magnification. Middle, empirical relative intensities and fitted candidate distributions. Right, mean ECE across five paired runs; error bars show sample standard deviations. Input construction and complete results are given in Methods and Supplementary Note S4.",
+      "assets": [
+        {
+          "path": "assets/paper/distribution_fit_warmup.png",
+          "sha256": "5b05fc936f8ae0f8a01d6b972d9f04fd94fe44f2e676824b358fed887aec59e2",
+          "bytes": 290164
+        }
+      ],
+      "role": "experiment"
+    }
+  ]
+}

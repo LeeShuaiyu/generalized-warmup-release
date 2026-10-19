@@ -1,0 +1,217 @@
+Dataset,Model,Method,Metric,Paper,Recomputed,Δ mean,Matches,reference_table,absolute_mean_difference,unit,threshold,pairwise_ranking_reversals,accepted_by_author_rule
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,ECE (%) ↓,5.146 ± 0.442,5.146 ± 0.442,0.0002898399155215614,True,main_pretrained,0.0002898399155215614,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,Accuracy (%) ↑,92.41 ± 0.65,92.41 ± 0.65,0.003324269204625807,True,main_pretrained,0.003324269204625807,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,ECE (%) ↓,5.013 ± 0.629,5.013 ± 0.629,-0.00025131245968079696,True,main_pretrained,0.00025131245968079696,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,Accuracy (%) ↑,92.49 ± 0.54,92.49 ± 0.54,0.004901427600287889,True,main_pretrained,0.004901427600287889,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,ECE (%) ↓,4.396 ± 0.992,4.396 ± 0.992,8.936715310436938e-05,True,main_pretrained,8.936715310436938e-05,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Accuracy (%) ↑,92.69 ± 0.66,92.69 ± 0.66,0.0020462270564252094,True,main_pretrained,0.0020462270564252094,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,ECE (%) ↓,5.134 ± 1.017,5.127 ± 1.059,-0.006513253669234054,False,main_pretrained,0.006513253669234054,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,Accuracy (%) ↑,63.81 ± 1.39,63.80 ± 1.40,-0.013995793901166564,False,main_pretrained,0.013995793901166564,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,ECE (%) ↓,4.102 ± 1.377,4.087 ± 1.363,-0.015359978199736446,False,main_pretrained,0.015359978199736446,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,Accuracy (%) ↑,66.94 ± 1.05,66.94 ± 1.05,6.309148264449504e-05,True,main_pretrained,6.309148264449504e-05,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,ECE (%) ↓,3.996 ± 1.131,4.030 ± 1.126,0.03439304030609014,False,main_pretrained,0.03439304030609014,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Accuracy (%) ↑,66.83 ± 1.09,66.82 ± 1.09,-0.005604626708731075,False,main_pretrained,0.005604626708731075,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,ECE (%) ↓,16.224 ± 4.945,16.224 ± 4.945,0.00044835227779316256,True,main_pretrained,0.00044835227779316256,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,Accuracy (%) ↑,71.02 ± 2.27,71.02 ± 2.27,-0.0008917197452262826,True,main_pretrained,0.0008917197452262826,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,ECE (%) ↓,14.970 ± 4.602,14.970 ± 4.602,-9.281225829482764e-05,True,main_pretrained,9.281225829482764e-05,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,Accuracy (%) ↑,70.25 ± 2.97,70.25 ± 2.97,0.0047770700636817764,True,main_pretrained,0.0047770700636817764,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,ECE (%) ↓,12.010 ± 1.618,12.010 ± 1.618,0.0003342585633365758,True,main_pretrained,0.0003342585633365758,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,Accuracy (%) ↑,69.24 ± 4.04,69.24 ± 4.04,-0.004331210191082846,True,main_pretrained,0.004331210191082846,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,ECE (%) ↓,7.425 ± 1.004,7.425 ± 1.004,-0.00040367207016878126,True,main_pretrained,0.00040367207016878126,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,Accuracy (%) ↑,89.35 ± 1.22,89.35 ± 1.22,-0.000684931506839348,True,main_pretrained,0.000684931506839348,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,ECE (%) ↓,7.002 ± 1.881,7.002 ± 1.881,-0.0003813704934003681,True,main_pretrained,0.0003813704934003681,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,Accuracy (%) ↑,89.38 ± 1.09,89.38 ± 1.09,0.0035616438356100844,True,main_pretrained,0.0035616438356100844,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,GW,ECE (%) ↓,6.300 ± 1.258,6.300 ± 1.258,-4.7236840885922504e-05,True,main_pretrained,4.7236840885922504e-05,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,GW,Accuracy (%) ↑,89.93 ± 1.16,89.93 ± 1.16,0.0015068493150636186,True,main_pretrained,0.0015068493150636186,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard training,ECE (%) ↓,4.928 ± 0.918,4.915 ± 0.920,-0.012953146496586854,False,main_random,0.012953146496586854,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard training,Accuracy (%) ↑,65.878 ± 1.459,65.878 ± 1.459,2.313354363536746e-05,True,main_random,2.313354363536746e-05,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,ECE (%) ↓,4.457 ± 1.039,4.456 ± 1.038,-0.0008602724090183145,False,main_random,0.0008602724090183145,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Accuracy (%) ↑,66.814 ± 1.099,66.814 ± 1.099,-0.00011987381702738276,True,main_random,0.00011987381702738276,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,Standard training,ECE (%) ↓,5.801 ± 1.633,5.801 ± 1.633,0.00014337715936907358,True,main_random,0.00014337715936907358,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,Standard training,Accuracy (%) ↑,66.215 ± 1.576,66.215 ± 1.576,-0.0004889589905445746,True,main_random,0.0004889589905445746,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,GW,ECE (%) ↓,4.088 ± 0.686,4.073 ± 0.683,-0.015441203573873352,False,main_random,0.015441203573873352,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,GW,Accuracy (%) ↑,66.330 ± 1.409,66.330 ± 1.409,0.0001787592008355432,True,main_random,0.0001787592008355432,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,Standard training,ECE (%) ↓,2.168 ± 0.917,2.167 ± 0.916,-0.0013718630737233894,False,main_random,0.0013718630737233894,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,Standard training,Accuracy (%) ↑,93.283 ± 0.716,93.283 ± 0.716,0.0004806254248848063,True,main_random,0.0004806254248848063,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,GW,ECE (%) ↓,1.542 ± 0.457,1.534 ± 0.451,-0.007636019437313513,False,main_random,0.007636019437313513,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,GW,Accuracy (%) ↑,93.508 ± 0.633,93.515 ± 0.629,0.006615907545892696,False,main_random,0.006615907545892696,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard training,ECE (%) ↓,1.826 ± 0.894,1.826 ± 0.897,-0.0001065817534555702,False,main_random,0.0001065817534555702,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard training,Accuracy (%) ↑,93.617 ± 0.642,93.610 ± 0.644,-0.007210740992519504,False,main_random,0.007210740992519504,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,ECE (%) ↓,1.495 ± 0.514,1.497 ± 0.504,0.002338133885343874,False,main_random,0.002338133885343874,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Accuracy (%) ↑,93.793 ± 0.809,93.787 ± 0.815,-0.0064602311352928155,False,main_random,0.0064602311352928155,percentage_points,1.0,[],True
+OCTDL,ResNet-18,Standard training,ECE (%) ↓,9.595 ± 2.275,9.581 ± 2.293,-0.014056454116575523,False,main_random,0.014056454116575523,percentage_points,1.0,[],True
+OCTDL,ResNet-18,Standard training,Accuracy (%) ↑,81.644 ± 2.476,81.644 ± 2.476,-0.00016438356165338064,True,main_random,0.00016438356165338064,percentage_points,1.0,[],True
+OCTDL,ResNet-18,GW,ECE (%) ↓,7.430 ± 2.714,7.441 ± 2.671,0.011099831330769305,False,main_random,0.011099831330769305,percentage_points,1.0,[],True
+OCTDL,ResNet-18,GW,Accuracy (%) ↑,80.856 ± 3.658,80.890 ± 3.656,0.03441095890411816,False,main_random,0.03441095890411816,percentage_points,1.0,[],True
+OCTDL,ResNet-34,Standard training,ECE (%) ↓,8.595 ± 1.844,8.595 ± 1.844,0.00027794698004868224,True,main_random,0.00027794698004868224,percentage_points,1.0,[],True
+OCTDL,ResNet-34,Standard training,Accuracy (%) ↑,80.377 ± 4.107,80.377 ± 4.107,-0.0002876712328685471,True,main_random,0.0002876712328685471,percentage_points,1.0,[],True
+OCTDL,ResNet-34,GW,ECE (%) ↓,5.482 ± 1.097,5.482 ± 1.097,-0.00030979048904189455,True,main_random,0.00030979048904189455,percentage_points,1.0,[],True
+OCTDL,ResNet-34,GW,Accuracy (%) ↑,83.048 ± 3.647,83.048 ± 3.647,-5.4794520536916025e-05,True,main_random,5.4794520536916025e-05,percentage_points,1.0,[],True
+OCTDL,ResNet-50,Standard training,ECE (%) ↓,7.245 ± 1.551,7.245 ± 1.551,-0.00019778899689004703,True,main_random,0.00019778899689004703,percentage_points,1.0,[],True
+OCTDL,ResNet-50,Standard training,Accuracy (%) ↑,81.575 ± 3.041,81.575 ± 3.041,0.000342465753419674,True,main_random,0.000342465753419674,percentage_points,1.0,[],True
+OCTDL,ResNet-50,GW,ECE (%) ↓,6.847 ± 1.519,6.847 ± 1.519,-9.314941817084588e-05,True,main_random,9.314941817084588e-05,percentage_points,1.0,[],True
+OCTDL,ResNet-50,GW,Accuracy (%) ↑,80.137 ± 2.080,80.137 ± 2.080,-1.3698630127123579e-05,True,main_random,1.3698630127123579e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,ECE (%) ↓,7.6788 ± 0.2301,7.6788 ± 0.2301,-4.96006830941198e-05,True,s2_cifar10,4.96006830941198e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,Accuracy (%) ↑,8.5100 ± 0.1731,8.5100 ± 0.1731,0.0,True,s2_cifar10,0.0,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,Macro-F1 (%) ↑,7.7163 ± 0.1860,7.7163 ± 0.1860,5.398135449752317e-07,True,s2_cifar10,5.398135449752317e-07,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,NLL ↓,4.4566 ± 0.0114,4.4566 ± 0.0114,4.61177216948272e-06,True,s2_cifar10,4.61177216948272e-06,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,No warm-up,Brier ↓,0.98335 ± 0.00146,0.98335 ± 0.00146,4.776344256440801e-06,True,s2_cifar10,4.776344256440801e-06,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,ECE (%) ↓,5.1568 ± 0.2393,5.1568 ± 0.2393,1.9032798635798542e-05,True,s2_cifar10,1.9032798635798542e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,Accuracy (%) ↑,8.7340 ± 0.2033,8.7340 ± 0.2033,0.0,True,s2_cifar10,0.0,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,Macro-F1 (%) ↑,7.8021 ± 0.2193,7.8021 ± 0.2193,-8.492924460590245e-06,True,s2_cifar10,8.492924460590245e-06,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,NLL ↓,4.3519 ± 0.0117,4.3519 ± 0.0117,-3.595530084066212e-05,True,s2_cifar10,3.595530084066212e-05,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,Brier ↓,0.97543 ± 0.00144,0.97543 ± 0.00144,3.840714048575222e-06,True,s2_cifar10,3.840714048575222e-06,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,No warm-up,ECE (%) ↓,7.5778 ± 0.2289,7.5778 ± 0.2289,1.3112771291012848e-05,True,s2_cifar3,1.3112771291012848e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,Accuracy (%) ↑,8.5133 ± 0.2750,8.5133 ± 0.2750,3.3333333334439885e-05,True,s2_cifar3,3.3333333334439885e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,No warm-up,NLL ↓,4.4534 ± 0.0065,4.4534 ± 0.0065,2.8009117903238234e-05,True,s2_cifar3,2.8009117903238234e-05,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,No warm-up,Brier ↓,0.98276 ± 0.00069,0.98276 ± 0.00069,-2.85481584172409e-06,True,s2_cifar3,2.85481584172409e-06,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,ECE (%) ↓,5.1078 ± 0.1851,5.1078 ± 0.1851,-2.48641947244721e-05,True,s2_cifar3,2.48641947244721e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,Accuracy (%) ↑,8.6333 ± 0.0603,8.6333 ± 0.0603,3.3333333334439885e-05,True,s2_cifar3,3.3333333334439885e-05,percentage_points,1.0,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,NLL ↓,4.3504 ± 0.0013,4.3504 ± 0.0013,2.782759328034956e-05,True,s2_cifar3,2.782759328034956e-05,raw_metric,0.01,[],True
+CIFAR-100,Six-layer MLP,Gaussian warm-up,Brier ↓,0.97536 ± 0.00058,0.97536 ± 0.00058,3.983172207733254e-06,True,s2_cifar3,3.983172207733254e-06,raw_metric,0.01,[],True
+Gaussian,EuroSAT · ResNet-18,Gaussian,ECE (%) ↓,0.372 ± 0.113,0.372 ± 0.113,0.0002744186898342438,True,s3_noise,0.0002744186898342438,percentage_points,1.0,[],True
+Gaussian,EuroSAT · ResNet-18,Gaussian,Accuracy (%) ↑,94.58 ± 0.17,94.58 ± 0.17,0.003209876543209589,True,s3_noise,0.003209876543209589,percentage_points,1.0,[],True
+Gaussian,EuroSAT · ResNet-18,Gaussian,NLL ↓,0.1533 ± 0.0044,0.1533 ± 0.0044,2.0634802950419973e-05,True,s3_noise,2.0634802950419973e-05,raw_metric,0.01,[],True
+Gaussian,EuroSAT · ResNet-18,Gaussian,Brier ↓,0.0804 ± 0.0024,0.0804 ± 0.0024,2.4055932578204153e-05,True,s3_noise,2.4055932578204153e-05,raw_metric,0.01,[],True
+Gaussian,EuroSAT · ResNet-18,GW,ECE (%) ↓,0.442 ± 0.065,0.442 ± 0.064,-0.0003107141262641,False,s3_noise,0.0003107141262641,percentage_points,1.0,[],True
+Gaussian,EuroSAT · ResNet-18,GW,Accuracy (%) ↑,94.65 ± 0.08,94.65 ± 0.08,0.004814814814807278,True,s3_noise,0.004814814814807278,percentage_points,1.0,[],True
+Gaussian,EuroSAT · ResNet-18,GW,NLL ↓,0.1528 ± 0.0033,0.1528 ± 0.0033,1.1129427607448061e-05,True,s3_noise,1.1129427607448061e-05,raw_metric,0.01,[],True
+Gaussian,EuroSAT · ResNet-18,GW,Brier ↓,0.0801 ± 0.0015,0.0801 ± 0.0015,2.083261666688263e-05,True,s3_noise,2.083261666688263e-05,raw_metric,0.01,[],True
+LogGamma,EuroSAT · ResNet-18,Gaussian,ECE (%) ↓,0.449 ± 0.081,0.449 ± 0.081,0.00013988502062228791,True,s3_noise,0.00013988502062228791,percentage_points,1.0,[],True
+LogGamma,EuroSAT · ResNet-18,Gaussian,Accuracy (%) ↑,94.73 ± 0.20,94.73 ± 0.20,0.0013580246913562632,True,s3_noise,0.0013580246913562632,percentage_points,1.0,[],True
+LogGamma,EuroSAT · ResNet-18,Gaussian,NLL ↓,0.1520 ± 0.0055,0.1520 ± 0.0055,4.5585988172669456e-05,True,s3_noise,4.5585988172669456e-05,raw_metric,0.01,[],True
+LogGamma,EuroSAT · ResNet-18,Gaussian,Brier ↓,0.0795 ± 0.0029,0.0795 ± 0.0029,6.794396501780264e-06,True,s3_noise,6.794396501780264e-06,raw_metric,0.01,[],True
+LogGamma,EuroSAT · ResNet-18,GW,ECE (%) ↓,0.407 ± 0.102,0.407 ± 0.102,-0.00021767634129338242,True,s3_noise,0.00021767634129338242,percentage_points,1.0,[],True
+LogGamma,EuroSAT · ResNet-18,GW,Accuracy (%) ↑,94.61 ± 0.18,94.61 ± 0.18,-0.00012345679012071287,True,s3_noise,0.00012345679012071287,percentage_points,1.0,[],True
+LogGamma,EuroSAT · ResNet-18,GW,NLL ↓,0.1535 ± 0.0042,0.1535 ± 0.0042,2.067412610604058e-05,True,s3_noise,2.067412610604058e-05,raw_metric,0.01,[],True
+LogGamma,EuroSAT · ResNet-18,GW,Brier ↓,0.0807 ± 0.0022,0.0807 ± 0.0022,-1.115824373329466e-05,True,s3_noise,1.115824373329466e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Standard training,ECE (%) ↓,4.928 ± 0.918,4.915 ± 0.920,-0.012953146496586854,False,s4_main,0.012953146496586854,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard training,Accuracy (%) ↑,65.878 ± 1.459,65.878 ± 1.459,2.313354363536746e-05,True,s4_main,2.313354363536746e-05,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard training,Macro-F1 (%) ↑,48.904 ± 4.754,48.904 ± 4.754,0.0002747802899065732,True,s4_main,0.0002747802899065732,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard training,NLL ↓,0.7896 ± 0.0247,0.7896 ± 0.0247,2.1329582932660962e-05,True,s4_main,2.1329582932660962e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Standard training,Brier ↓,0.4614 ± 0.0153,0.4614 ± 0.0153,-1.5252674999133298e-06,True,s4_main,1.5252674999133298e-06,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,GW,ECE (%) ↓,4.457 ± 1.039,4.456 ± 1.038,-0.0008602724090183145,False,s4_main,0.0008602724090183145,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Accuracy (%) ↑,66.814 ± 1.099,66.814 ± 1.099,-0.00011987381702738276,True,s4_main,0.00011987381702738276,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Macro-F1 (%) ↑,52.529 ± 3.387,52.529 ± 3.387,0.0003611836523660372,True,s4_main,0.0003611836523660372,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,NLL ↓,0.7792 ± 0.0117,0.7792 ± 0.0117,-3.618624175605323e-05,True,s4_main,3.618624175605323e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,GW,Brier ↓,0.4567 ± 0.0063,0.4567 ± 0.0063,-3.8481325994654814e-05,True,s4_main,3.8481325994654814e-05,raw_metric,0.01,[],True
+OpenSARShip2,DenseNet-121,Standard training,ECE (%) ↓,5.801 ± 1.633,5.801 ± 1.633,0.00014337715936907358,True,s4_main,0.00014337715936907358,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,Standard training,Accuracy (%) ↑,66.215 ± 1.576,66.215 ± 1.576,-0.0004889589905445746,True,s4_main,0.0004889589905445746,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,Standard training,Macro-F1 (%) ↑,53.261 ± 4.416,53.261 ± 4.416,0.0002137616597650549,True,s4_main,0.0002137616597650549,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,Standard training,NLL ↓,0.7851 ± 0.0211,0.7851 ± 0.0211,-3.12478022147511e-05,True,s4_main,3.12478022147511e-05,raw_metric,0.01,[],True
+OpenSARShip2,DenseNet-121,Standard training,Brier ↓,0.4610 ± 0.0128,0.4610 ± 0.0128,-2.728565477833067e-05,True,s4_main,2.728565477833067e-05,raw_metric,0.01,[],True
+OpenSARShip2,DenseNet-121,GW,ECE (%) ↓,4.088 ± 0.686,4.073 ± 0.683,-0.015441203573873352,False,s4_main,0.015441203573873352,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,GW,Accuracy (%) ↑,66.330 ± 1.409,66.330 ± 1.409,0.0001787592008355432,True,s4_main,0.0001787592008355432,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,GW,Macro-F1 (%) ↑,51.267 ± 2.921,51.267 ± 2.921,-0.00020810396407000553,True,s4_main,0.00020810396407000553,percentage_points,1.0,[],True
+OpenSARShip2,DenseNet-121,GW,NLL ↓,0.7817 ± 0.0158,0.7817 ± 0.0158,3.188779614171633e-05,True,s4_main,3.188779614171633e-05,raw_metric,0.01,[],True
+OpenSARShip2,DenseNet-121,GW,Brier ↓,0.4583 ± 0.0103,0.4583 ± 0.0103,-3.806115484061845e-05,True,s4_main,3.806115484061845e-05,raw_metric,0.01,[],True
+Schwegmann SAR,ResNet-18,Standard training,ECE (%) ↓,2.168 ± 0.917,2.167 ± 0.916,-0.0013718630737233894,False,s4_main,0.0013718630737233894,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,Standard training,Accuracy (%) ↑,93.283 ± 0.716,93.283 ± 0.716,0.0004806254248848063,True,s4_main,0.0004806254248848063,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,Standard training,Macro-F1 (%) ↑,92.746 ± 0.989,92.746 ± 0.989,-0.0002741202057308101,True,s4_main,0.0002741202057308101,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,Standard training,NLL ↓,0.1638 ± 0.0162,0.1638 ± 0.0162,-3.8494462340332714e-05,True,s4_main,3.8494462340332714e-05,raw_metric,0.01,[],True
+Schwegmann SAR,ResNet-18,Standard training,Brier ↓,0.0972 ± 0.0096,0.0972 ± 0.0096,-1.833003321231874e-05,True,s4_main,1.833003321231874e-05,raw_metric,0.01,[],True
+Schwegmann SAR,ResNet-18,GW,ECE (%) ↓,1.542 ± 0.457,1.534 ± 0.451,-0.007636019437313513,False,s4_main,0.007636019437313513,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,GW,Accuracy (%) ↑,93.508 ± 0.633,93.515 ± 0.629,0.006615907545892696,False,s4_main,0.006615907545892696,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,GW,Macro-F1 (%) ↑,93.121 ± 0.682,93.128 ± 0.675,0.00708684407956639,False,s4_main,0.00708684407956639,percentage_points,1.0,[],True
+Schwegmann SAR,ResNet-18,GW,NLL ↓,0.1576 ± 0.0106,0.1576 ± 0.0106,6.000413508427949e-06,True,s4_main,6.000413508427949e-06,raw_metric,0.01,[],True
+Schwegmann SAR,ResNet-18,GW,Brier ↓,0.0940 ± 0.0068,0.0940 ± 0.0068,-2.5005090577859268e-05,True,s4_main,2.5005090577859268e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Standard training,ECE (%) ↓,1.826 ± 0.894,1.826 ± 0.897,-0.0001065817534555702,False,s4_main,0.0001065817534555702,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard training,Accuracy (%) ↑,93.617 ± 0.642,93.610 ± 0.644,-0.007210740992519504,False,s4_main,0.007210740992519504,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard training,Macro-F1 (%) ↑,93.202 ± 0.798,93.196 ± 0.797,-0.006074480264985027,False,s4_main,0.006074480264985027,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard training,NLL ↓,0.1643 ± 0.0182,0.1644 ± 0.0182,5.0276082912831255e-05,False,s4_main,5.0276082912831255e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Standard training,Brier ↓,0.0948 ± 0.0095,0.0948 ± 0.0095,-2.13339714213584e-05,True,s4_main,2.13339714213584e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,GW,ECE (%) ↓,1.495 ± 0.514,1.497 ± 0.504,0.002338133885343874,False,s4_main,0.002338133885343874,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Accuracy (%) ↑,93.793 ± 0.809,93.787 ± 0.815,-0.0064602311352928155,False,s4_main,0.0064602311352928155,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Macro-F1 (%) ↑,93.527 ± 0.769,93.521 ± 0.776,-0.0060784781948513,False,s4_main,0.0060784781948513,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,NLL ↓,0.1549 ± 0.0166,0.1549 ± 0.0166,-1.1570322411752487e-05,True,s4_main,1.1570322411752487e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,GW,Brier ↓,0.0895 ± 0.0104,0.0895 ± 0.0104,3.273727654365399e-05,True,s4_main,3.273727654365399e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-18,Standard training,ECE (%) ↓,9.595 ± 2.275,9.581 ± 2.293,-0.014056454116575523,False,s4_main,0.014056454116575523,percentage_points,1.0,[],True
+OCTDL,ResNet-18,Standard training,Accuracy (%) ↑,81.644 ± 2.476,81.644 ± 2.476,-0.00016438356165338064,True,s4_main,0.00016438356165338064,percentage_points,1.0,[],True
+OCTDL,ResNet-18,Standard training,Macro-F1 (%) ↑,65.856 ± 4.216,65.856 ± 4.216,0.00041492847238089325,True,s4_main,0.00041492847238089325,percentage_points,1.0,[],True
+OCTDL,ResNet-18,Standard training,NLL ↓,0.6487 ± 0.0884,0.6487 ± 0.0884,-1.757021375259349e-05,True,s4_main,1.757021375259349e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-18,Standard training,Brier ↓,0.2798 ± 0.0278,0.2798 ± 0.0278,-3.348117053142419e-05,True,s4_main,3.348117053142419e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-18,GW,ECE (%) ↓,7.430 ± 2.714,7.441 ± 2.671,0.011099831330769305,False,s4_main,0.011099831330769305,percentage_points,1.0,[],True
+OCTDL,ResNet-18,GW,Accuracy (%) ↑,80.856 ± 3.658,80.890 ± 3.656,0.03441095890411816,False,s4_main,0.03441095890411816,percentage_points,1.0,[],True
+OCTDL,ResNet-18,GW,Macro-F1 (%) ↑,61.806 ± 7.456,61.945 ± 7.490,0.13913737311625596,False,s4_main,0.13913737311625596,percentage_points,1.0,[],True
+OCTDL,ResNet-18,GW,NLL ↓,0.6147 ± 0.1033,0.6147 ± 0.1033,-3.609663829673426e-05,True,s4_main,3.609663829673426e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-18,GW,Brier ↓,0.2800 ± 0.0483,0.2800 ± 0.0483,2.396419375377823e-05,True,s4_main,2.396419375377823e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-34,Standard training,ECE (%) ↓,8.595 ± 1.844,8.595 ± 1.844,0.00027794698004868224,True,s4_main,0.00027794698004868224,percentage_points,1.0,[],True
+OCTDL,ResNet-34,Standard training,Accuracy (%) ↑,80.377 ± 4.107,80.377 ± 4.107,-0.0002876712328685471,True,s4_main,0.0002876712328685471,percentage_points,1.0,[],True
+OCTDL,ResNet-34,Standard training,Macro-F1 (%) ↑,60.694 ± 10.858,60.694 ± 10.858,-0.00011591105737807084,True,s4_main,0.00011591105737807084,percentage_points,1.0,[],True
+OCTDL,ResNet-34,Standard training,NLL ↓,0.6821 ± 0.1037,0.6821 ± 0.1037,1.564052951363859e-05,True,s4_main,1.564052951363859e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-34,Standard training,Brier ↓,0.2900 ± 0.0475,0.2900 ± 0.0475,-2.6853551794991937e-06,True,s4_main,2.6853551794991937e-06,raw_metric,0.01,[],True
+OCTDL,ResNet-34,GW,ECE (%) ↓,5.482 ± 1.097,5.482 ± 1.097,-0.00030979048904189455,True,s4_main,0.00030979048904189455,percentage_points,1.0,[],True
+OCTDL,ResNet-34,GW,Accuracy (%) ↑,83.048 ± 3.647,83.048 ± 3.647,-5.4794520536916025e-05,True,s4_main,5.4794520536916025e-05,percentage_points,1.0,[],True
+OCTDL,ResNet-34,GW,Macro-F1 (%) ↑,65.217 ± 8.901,65.217 ± 8.901,0.00021079210632990453,True,s4_main,0.00021079210632990453,percentage_points,1.0,[],True
+OCTDL,ResNet-34,GW,NLL ↓,0.5409 ± 0.0920,0.5409 ± 0.0920,-4.604594594104228e-05,True,s4_main,4.604594594104228e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-34,GW,Brier ↓,0.2436 ± 0.0409,0.2436 ± 0.0409,-1.1644755998019285e-05,True,s4_main,1.1644755998019285e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-50,Standard training,ECE (%) ↓,7.245 ± 1.551,7.245 ± 1.551,-0.00019778899689004703,True,s4_main,0.00019778899689004703,percentage_points,1.0,[],True
+OCTDL,ResNet-50,Standard training,Accuracy (%) ↑,81.575 ± 3.041,81.575 ± 3.041,0.000342465753419674,True,s4_main,0.000342465753419674,percentage_points,1.0,[],True
+OCTDL,ResNet-50,Standard training,Macro-F1 (%) ↑,63.546 ± 6.419,63.546 ± 6.419,-0.0003565087689310076,True,s4_main,0.0003565087689310076,percentage_points,1.0,[],True
+OCTDL,ResNet-50,Standard training,NLL ↓,0.6101 ± 0.0834,0.6101 ± 0.0834,-1.9222535730722967e-05,True,s4_main,1.9222535730722967e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-50,Standard training,Brier ↓,0.2684 ± 0.0341,0.2684 ± 0.0341,-1.3933683052191892e-05,True,s4_main,1.3933683052191892e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-50,GW,ECE (%) ↓,6.847 ± 1.519,6.847 ± 1.519,-9.314941817084588e-05,True,s4_main,9.314941817084588e-05,percentage_points,1.0,[],True
+OCTDL,ResNet-50,GW,Accuracy (%) ↑,80.137 ± 2.080,80.137 ± 2.080,-1.3698630127123579e-05,True,s4_main,1.3698630127123579e-05,percentage_points,1.0,[],True
+OCTDL,ResNet-50,GW,Macro-F1 (%) ↑,58.569 ± 5.606,58.569 ± 5.606,-0.00010601236004958992,True,s4_main,0.00010601236004958992,percentage_points,1.0,[],True
+OCTDL,ResNet-50,GW,NLL ↓,0.6169 ± 0.0652,0.6169 ± 0.0652,-3.178570354611665e-05,True,s4_main,3.178570354611665e-05,raw_metric,0.01,[],True
+OCTDL,ResNet-50,GW,Brier ↓,0.2838 ± 0.0261,0.2838 ± 0.0261,2.501919210901038e-05,True,s4_main,2.501919210901038e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,ECE (%) ↓,5.146 ± 0.442,5.146 ± 0.442,0.0002898399155215614,True,s5_pretrained,0.0002898399155215614,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,Accuracy (%) ↑,92.41 ± 0.65,92.41 ± 0.65,0.003324269204625807,True,s5_pretrained,0.003324269204625807,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,Macro-F1 (%) ↑,91.73 ± 0.75,91.73 ± 0.75,0.002903955929028257,True,s5_pretrained,0.002903955929028257,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,NLL ↓,0.2965 ± 0.0279,0.2965 ± 0.0279,3.3681361174542346e-06,True,s5_pretrained,3.3681361174542346e-06,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Standard fine-tuning,Brier ↓,0.1288 ± 0.0086,0.1288 ± 0.0086,-2.609445037521363e-05,True,s5_pretrained,2.609445037521363e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,ECE (%) ↓,5.013 ± 0.629,5.013 ± 0.629,-0.00025131245968079696,True,s5_pretrained,0.00025131245968079696,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,Accuracy (%) ↑,92.49 ± 0.54,92.49 ± 0.54,0.004901427600287889,True,s5_pretrained,0.004901427600287889,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,Macro-F1 (%) ↑,91.82 ± 0.61,91.82 ± 0.61,0.004420979620064713,True,s5_pretrained,0.004420979620064713,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,NLL ↓,0.2844 ± 0.0317,0.2844 ± 0.0317,4.7568399114461535e-05,True,s5_pretrained,4.7568399114461535e-05,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,Gaussian warm-up,Brier ↓,0.1255 ± 0.0087,0.1255 ± 0.0087,3.3885391826915523e-06,True,s5_pretrained,3.3885391826915523e-06,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,GW,ECE (%) ↓,4.396 ± 0.992,4.396 ± 0.992,8.936715310436938e-05,True,s5_pretrained,8.936715310436938e-05,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Accuracy (%) ↑,92.69 ± 0.66,92.69 ± 0.66,0.0020462270564252094,True,s5_pretrained,0.0020462270564252094,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,Macro-F1 (%) ↑,92.11 ± 0.75,92.11 ± 0.75,-0.004934947154751512,True,s5_pretrained,0.004934947154751512,percentage_points,1.0,[],True
+Schwegmann SAR,DenseNet-121,GW,NLL ↓,0.2636 ± 0.0250,0.2636 ± 0.0250,-8.240664748693227e-06,True,s5_pretrained,8.240664748693227e-06,raw_metric,0.01,[],True
+Schwegmann SAR,DenseNet-121,GW,Brier ↓,0.1206 ± 0.0079,0.1206 ± 0.0079,4.7209541641390906e-05,True,s5_pretrained,4.7209541641390906e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,ECE (%) ↓,5.134 ± 1.017,5.127 ± 1.059,-0.006513253669234054,False,s5_pretrained,0.006513253669234054,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,Accuracy (%) ↑,63.81 ± 1.39,63.80 ± 1.40,-0.013995793901166564,False,s5_pretrained,0.013995793901166564,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,Macro-F1 (%) ↑,50.33 ± 5.39,50.32 ± 5.38,-0.010139630090463925,False,s5_pretrained,0.010139630090463925,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,NLL ↓,0.8359 ± 0.0292,0.8359 ± 0.0292,8.280499308455092e-08,True,s5_pretrained,8.280499308455092e-08,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Standard fine-tuning,Brier ↓,0.4899 ± 0.0188,0.4899 ± 0.0188,-2.89026300894224e-05,True,s5_pretrained,2.89026300894224e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,ECE (%) ↓,4.102 ± 1.377,4.087 ± 1.363,-0.015359978199736446,False,s5_pretrained,0.015359978199736446,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,Accuracy (%) ↑,66.94 ± 1.05,66.94 ± 1.05,6.309148264449504e-05,True,s5_pretrained,6.309148264449504e-05,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,Macro-F1 (%) ↑,57.87 ± 1.02,57.87 ± 1.02,-0.0008167557643687928,True,s5_pretrained,0.0008167557643687928,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,NLL ↓,0.7845 ± 0.0109,0.7845 ± 0.0109,1.102739003822073e-05,True,s5_pretrained,1.102739003822073e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,Gaussian warm-up,Brier ↓,0.4575 ± 0.0067,0.4575 ± 0.0067,-1.5712430213588036e-06,True,s5_pretrained,1.5712430213588036e-06,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,GW,ECE (%) ↓,3.996 ± 1.131,4.030 ± 1.126,0.03439304030609014,False,s5_pretrained,0.03439304030609014,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Accuracy (%) ↑,66.83 ± 1.09,66.82 ± 1.09,-0.005604626708731075,False,s5_pretrained,0.005604626708731075,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,Macro-F1 (%) ↑,57.68 ± 1.18,57.67 ± 1.17,-0.006554672765687997,False,s5_pretrained,0.006554672765687997,percentage_points,1.0,[],True
+OpenSARShip2,ResNet-18,GW,NLL ↓,0.7831 ± 0.0113,0.7831 ± 0.0113,-3.143546972383948e-05,True,s5_pretrained,3.143546972383948e-05,raw_metric,0.01,[],True
+OpenSARShip2,ResNet-18,GW,Brier ↓,0.4568 ± 0.0069,0.4568 ± 0.0069,2.048221605832623e-05,True,s5_pretrained,2.048221605832623e-05,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,ECE (%) ↓,16.224 ± 4.945,16.224 ± 4.945,0.00044835227779316256,True,s5_pretrained,0.00044835227779316256,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,Accuracy (%) ↑,71.02 ± 2.27,71.02 ± 2.27,-0.0008917197452262826,True,s5_pretrained,0.0008917197452262826,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,Macro-F1 (%) ↑,63.46 ± 4.55,63.46 ± 4.55,0.002497309051058494,True,s5_pretrained,0.002497309051058494,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,NLL ↓,1.0739 ± 0.2248,1.0739 ± 0.2248,-8.21104751702606e-06,True,s5_pretrained,8.21104751702606e-06,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,Standard fine-tuning,Brier ↓,0.4546 ± 0.0349,0.4546 ± 0.0349,7.102283131832365e-06,True,s5_pretrained,7.102283131832365e-06,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,ECE (%) ↓,14.970 ± 4.602,14.970 ± 4.602,-9.281225829482764e-05,True,s5_pretrained,9.281225829482764e-05,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,Accuracy (%) ↑,70.25 ± 2.97,70.25 ± 2.97,0.0047770700636817764,True,s5_pretrained,0.0047770700636817764,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,Macro-F1 (%) ↑,64.59 ± 4.21,64.59 ± 4.21,-0.0038197924393443827,True,s5_pretrained,0.0038197924393443827,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,NLL ↓,0.9699 ± 0.1684,0.9699 ± 0.1684,1.8563881646116442e-05,True,s5_pretrained,1.8563881646116442e-05,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,Gaussian warm-up,Brier ↓,0.4451 ± 0.0357,0.4451 ± 0.0357,-4.756337265432453e-06,True,s5_pretrained,4.756337265432453e-06,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,ECE (%) ↓,12.010 ± 1.618,12.010 ± 1.618,0.0003342585633365758,True,s5_pretrained,0.0003342585633365758,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,Accuracy (%) ↑,69.24 ± 4.04,69.24 ± 4.04,-0.004331210191082846,True,s5_pretrained,0.004331210191082846,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,Macro-F1 (%) ↑,62.60 ± 4.87,62.60 ± 4.87,-0.004178551723036605,True,s5_pretrained,0.004178551723036605,percentage_points,1.0,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,NLL ↓,0.8797 ± 0.0737,0.8797 ± 0.0736,3.0719911213616946e-05,False,s5_pretrained,3.0719911213616946e-05,raw_metric,0.01,[],True
+FUSAR-Ship-5 proxy,VGG-16,GW,Brier ↓,0.4386 ± 0.0357,0.4386 ± 0.0357,-2.5488253690197915e-05,True,s5_pretrained,2.5488253690197915e-05,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,ECE (%) ↓,7.425 ± 1.004,7.425 ± 1.004,-0.00040367207016878126,True,s5_pretrained,0.00040367207016878126,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,Accuracy (%) ↑,89.35 ± 1.22,89.35 ± 1.22,-0.000684931506839348,True,s5_pretrained,0.000684931506839348,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,Macro-F1 (%) ↑,75.63 ± 3.30,75.63 ± 3.30,0.0037419183411628865,True,s5_pretrained,0.0037419183411628865,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,NLL ↓,0.4633 ± 0.0868,0.4633 ± 0.0868,4.722330219214532e-05,True,s5_pretrained,4.722330219214532e-05,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,Standard fine-tuning,Brier ↓,0.1756 ± 0.0204,0.1756 ± 0.0204,-1.135152403872186e-05,True,s5_pretrained,1.135152403872186e-05,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,ECE (%) ↓,7.002 ± 1.881,7.002 ± 1.881,-0.0003813704934003681,True,s5_pretrained,0.0003813704934003681,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,Accuracy (%) ↑,89.38 ± 1.09,89.38 ± 1.09,0.0035616438356100844,True,s5_pretrained,0.0035616438356100844,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,Macro-F1 (%) ↑,74.26 ± 4.46,74.26 ± 4.46,0.00331510589428774,True,s5_pretrained,0.00331510589428774,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,NLL ↓,0.4430 ± 0.0864,0.4430 ± 0.0864,4.435306204253475e-06,True,s5_pretrained,4.435306204253475e-06,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,Gaussian warm-up,Brier ↓,0.1703 ± 0.0201,0.1703 ± 0.0201,1.1674787466775527e-05,True,s5_pretrained,1.1674787466775527e-05,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,GW,ECE (%) ↓,6.300 ± 1.258,6.300 ± 1.258,-4.7236840885922504e-05,True,s5_pretrained,4.7236840885922504e-05,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,GW,Accuracy (%) ↑,89.93 ± 1.16,89.93 ± 1.16,0.0015068493150636186,True,s5_pretrained,0.0015068493150636186,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,GW,Macro-F1 (%) ↑,77.20 ± 3.88,77.20 ± 3.88,0.0007841639877028683,True,s5_pretrained,0.0007841639877028683,percentage_points,1.0,[],True
+OCTDL,Swin-Tiny,GW,NLL ↓,0.3749 ± 0.0796,0.3749 ± 0.0796,-3.7578052288766983e-06,True,s5_pretrained,3.7578052288766983e-06,raw_metric,0.01,[],True
+OCTDL,Swin-Tiny,GW,Brier ↓,0.1600 ± 0.0206,0.1600 ± 0.0206,3.068569104192065e-05,True,s5_pretrained,3.068569104192065e-05,raw_metric,0.01,[],True

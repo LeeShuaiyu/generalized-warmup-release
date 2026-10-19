@@ -1,0 +1,73 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)",
+    "Macro-F1 (%)",
+    "NLL",
+    "Brier"
+  ],
+  "precision": {
+    "ECE (%)": 4,
+    "Accuracy (%)": 4,
+    "Macro-F1 (%)": 4,
+    "NLL": 4,
+    "Brier": 5
+  },
+  "rows": [
+    {
+      "key": [
+        "CIFAR-100",
+        "Six-layer MLP",
+        "No warm-up"
+      ],
+      "ECE (%)": [
+        7.6788,
+        0.2301
+      ],
+      "Accuracy (%)": [
+        8.51,
+        0.1731
+      ],
+      "Macro-F1 (%)": [
+        7.7163,
+        0.186
+      ],
+      "NLL": [
+        4.4566,
+        0.0114
+      ],
+      "Brier": [
+        0.98335,
+        0.00146
+      ]
+    },
+    {
+      "key": [
+        "CIFAR-100",
+        "Six-layer MLP",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        5.1568,
+        0.2393
+      ],
+      "Accuracy (%)": [
+        8.734,
+        0.2033
+      ],
+      "Macro-F1 (%)": [
+        7.8021,
+        0.2193
+      ],
+      "NLL": [
+        4.3519,
+        0.0117
+      ],
+      "Brier": [
+        0.97543,
+        0.00144
+      ]
+    }
+  ],
+  "paper_label": "tab:figure2-cifar-full"
+}

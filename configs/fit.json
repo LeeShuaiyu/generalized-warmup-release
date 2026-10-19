@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "id": "opensar",
+      "label": "OpenSARShip2",
+      "source_id": "opensarship2_grd3",
+      "bank": "artifacts/fit/opensar/bank.npz",
+      "records": "artifacts/fit/opensar/records.json",
+      "coordinates": [
+        "model_gray"
+      ],
+      "bank_source_sha256": "491fd52314e5900a4bffeba771e16f695b04303674cbbd67373fa645d32b68a9",
+      "records_source_sha256": "10bb4c4ebe7d0e0243a34b2de8e176bb605f7e1b6ee4ba4666c32b76b9df6c5f"
+    },
+    {
+      "id": "sar",
+      "label": "Schwegmann SAR",
+      "source_id": "sar_dataset_window21",
+      "bank": "artifacts/fit/sar/bank.npz",
+      "records": "artifacts/fit/sar/records.json",
+      "coordinates": [
+        "model_gray"
+      ],
+      "bank_source_sha256": "de4a579eff38b9e010fc58c00cc1b0f4a27cb99a27812f5700afef7741ef1832",
+      "records_source_sha256": "8255bdb2bd88131a9961c28e61ea8fab9320d72a7c9abc46e5ae46bf22a3d312"
+    },
+    {
+      "id": "fusar",
+      "label": "FUSAR-Ship",
+      "source_id": "fusar_ship_paper5_proxy",
+      "bank": "artifacts/fit/fusar/bank.npz",
+      "records": "artifacts/fit/fusar/records.json",
+      "coordinates": [
+        "model_gray",
+        "stored"
+      ],
+      "bank_source_sha256": "492c6f5f8239c8ddc09bd6023e5857432c185ecc8fe14b5246b1d78bd33cd16e",
+      "records_source_sha256": "02c713d67bf5a1bb02a38b75f6d76a4ba833275314c6920f26db238b17d785e1"
+    },
+    {
+      "id": "oct",
+      "label": "OCTDL",
+      "source_id": "oct_background",
+      "bank": "artifacts/fit/oct/bank.npz",
+      "records": "artifacts/fit/oct/records.json",
+      "coordinates": [
+        "model_gray"
+      ],
+      "bank_source_sha256": "04bb4f66f133ba34d6cf036594a2e12ade86dcc5605f3bf3dbf3b4a428ad0e24",
+      "records_source_sha256": "25c17c7170180103b21a9b0bb31a36f688a7d73c4f056a5db6c1b28635e2e87b"
+    }
+  ],
+  "seeds": [
+    91501,
+    91502,
+    91503,
+    91504,
+    91505
+  ],
+  "fit_group_fraction": 0.7,
+  "target": "Positive pixels divided by each block mean; zero pixels excluded",
+  "block_size": 16
+}

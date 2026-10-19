@@ -1,0 +1,154 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)",
+    "Macro-F1 (%)",
+    "NLL",
+    "Brier"
+  ],
+  "precision": {
+    "ECE (%)": 2,
+    "Accuracy (%)": 2,
+    "Macro-F1 (%)": 2,
+    "NLL": 4,
+    "Brier": 4
+  },
+  "rows": [
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        5.04,
+        1.28
+      ],
+      "Accuracy (%)": [
+        66.77,
+        0.9
+      ],
+      "Macro-F1 (%)": [
+        54.79,
+        2.22
+      ],
+      "NLL": [
+        0.7771,
+        0.0046
+      ],
+      "Brier": [
+        0.457,
+        0.0035
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "Label smoothing"
+      ],
+      "ECE (%)": [
+        4.48,
+        2.12
+      ],
+      "Accuracy (%)": [
+        66.63,
+        0.26
+      ],
+      "Macro-F1 (%)": [
+        53.42,
+        6.28
+      ],
+      "NLL": [
+        0.7831,
+        0.0077
+      ],
+      "Brier": [
+        0.4608,
+        0.0048
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW + Label smoothing"
+      ],
+      "ECE (%)": [
+        4.12,
+        0.9
+      ],
+      "Accuracy (%)": [
+        65.4,
+        2.03
+      ],
+      "Macro-F1 (%)": [
+        51.63,
+        3.89
+      ],
+      "NLL": [
+        0.7941,
+        0.0191
+      ],
+      "Brier": [
+        0.4658,
+        0.0134
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "MMCE"
+      ],
+      "ECE (%)": [
+        5.33,
+        1.32
+      ],
+      "Accuracy (%)": [
+        65.47,
+        1.01
+      ],
+      "Macro-F1 (%)": [
+        55.62,
+        2.4
+      ],
+      "NLL": [
+        0.7923,
+        0.0174
+      ],
+      "Brier": [
+        0.4638,
+        0.0076
+      ]
+    },
+    {
+      "key": [
+        "OpenSARShip2",
+        "ResNet-18",
+        "GW + MMCE"
+      ],
+      "ECE (%)": [
+        4.58,
+        1.55
+      ],
+      "Accuracy (%)": [
+        67.05,
+        1.06
+      ],
+      "Macro-F1 (%)": [
+        51.63,
+        4.53
+      ],
+      "NLL": [
+        0.779,
+        0.0045
+      ],
+      "Brier": [
+        0.4553,
+        0.0035
+      ]
+    }
+  ],
+  "paper_label": "tab:training-calibration-compatibility"
+}

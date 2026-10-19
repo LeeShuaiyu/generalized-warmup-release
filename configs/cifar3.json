@@ -1,0 +1,236 @@
+{
+  "experiment_id": "cifar3",
+  "evaluation_split": "test",
+  "ece_bins": 15,
+  "seeds_per_condition": 3,
+  "runs": [
+    {
+      "id": "000",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/000.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "No warm-up",
+      "seed": 20261931,
+      "settings": {
+        "method": "erm",
+        "epochs": 30,
+        "warmup_steps": 0,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c000/final_model.pt",
+      "checkpoint_sha256": "b4bed7297758b6684c71cf0b0fdaac0d98b343863737e1b35cc9f4c0faf3c640",
+      "dataset_key": "cifar100"
+    },
+    {
+      "id": "001",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/001.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "No warm-up",
+      "seed": 20261932,
+      "settings": {
+        "method": "erm",
+        "epochs": 30,
+        "warmup_steps": 0,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c001/final_model.pt",
+      "checkpoint_sha256": "6862c0887fa91a204891dd203c0fa441b22b14d5310a32c214e1e2d427336e97",
+      "dataset_key": "cifar100"
+    },
+    {
+      "id": "002",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/002.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "No warm-up",
+      "seed": 20261933,
+      "settings": {
+        "method": "erm",
+        "epochs": 30,
+        "warmup_steps": 0,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c002/final_model.pt",
+      "checkpoint_sha256": "01353ad58fed7ad6c217e55a3f77f7220f8f1dbc0e47ff8504cd9e67d26cfaae",
+      "dataset_key": "cifar100"
+    },
+    {
+      "id": "003",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/003.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "Gaussian warm-up",
+      "seed": 20261931,
+      "settings": {
+        "method": "gaussian_scale_0p5",
+        "epochs": 30,
+        "warmup_steps": 1950,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c010/final_model.pt",
+      "checkpoint_sha256": "8b9ab9a2816a66e8bafaea7eb5738dc14c089674463288db163674856cc80ca5",
+      "dataset_key": "cifar100"
+    },
+    {
+      "id": "004",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/004.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "Gaussian warm-up",
+      "seed": 20261932,
+      "settings": {
+        "method": "gaussian_scale_1p0",
+        "epochs": 30,
+        "warmup_steps": 1950,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c011/final_model.pt",
+      "checkpoint_sha256": "9d7135c067c631a5b856fdfd6e76ed17d3605bef98ddc8295af5c23985bb9090",
+      "dataset_key": "cifar100"
+    },
+    {
+      "id": "005",
+      "samples": 10000,
+      "classes": 100,
+      "predictions": "results/cifar3/predictions/005.npz",
+      "logits_key": "logits",
+      "labels_key": "labels",
+      "dataset": "CIFAR-100",
+      "model": "Six-layer MLP",
+      "method": "Gaussian warm-up",
+      "seed": 20261933,
+      "settings": {
+        "method": "gaussian_scale_1p0",
+        "epochs": 30,
+        "warmup_steps": 1950,
+        "batch_size": 128,
+        "lr": 2e-05,
+        "weight_decay": 0.001,
+        "architecture": "linear_network_6x256",
+        "image_size": 32,
+        "evaluation_batch_size": 256,
+        "normalization_mean": [
+          0.5071,
+          0.4867,
+          0.4408
+        ],
+        "normalization_std": [
+          0.2675,
+          0.2565,
+          0.2761
+        ]
+      },
+      "checkpoint": "weights/cifar/c012/final_model.pt",
+      "checkpoint_sha256": "707e4cd46698df2bebea2496bbbca9d1e3b58ec03381dc3c67def899e85841cb",
+      "dataset_key": "cifar100"
+    }
+  ],
+  "row_order": [
+    [
+      "CIFAR-100",
+      "Six-layer MLP",
+      "No warm-up"
+    ],
+    [
+      "CIFAR-100",
+      "Six-layer MLP",
+      "Gaussian warm-up"
+    ]
+  ]
+}

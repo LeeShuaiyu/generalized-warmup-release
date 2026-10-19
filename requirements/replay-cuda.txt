@@ -1,0 +1,9 @@
+# Prediction runtime recorded for the SAR ImageNet checkpoint evaluations.
+# Python 3.10.12; keep this separate from the Python 3.12 notebook environment.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+numpy==2.2.6
+Pillow==12.2.0
+sympy==1.14.0
+nvidia-cudnn-cu12==9.19.0.56

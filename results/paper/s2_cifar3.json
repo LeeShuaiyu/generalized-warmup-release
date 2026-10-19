@@ -1,0 +1,63 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)",
+    "NLL",
+    "Brier"
+  ],
+  "precision": {
+    "ECE (%)": 4,
+    "Accuracy (%)": 4,
+    "NLL": 4,
+    "Brier": 5
+  },
+  "rows": [
+    {
+      "key": [
+        "CIFAR-100",
+        "Six-layer MLP",
+        "No warm-up"
+      ],
+      "ECE (%)": [
+        7.5778,
+        0.2289
+      ],
+      "Accuracy (%)": [
+        8.5133,
+        0.275
+      ],
+      "NLL": [
+        4.4534,
+        0.0065
+      ],
+      "Brier": [
+        0.98276,
+        0.00069
+      ]
+    },
+    {
+      "key": [
+        "CIFAR-100",
+        "Six-layer MLP",
+        "Gaussian warm-up"
+      ],
+      "ECE (%)": [
+        5.1078,
+        0.1851
+      ],
+      "Accuracy (%)": [
+        8.6333,
+        0.0603
+      ],
+      "NLL": [
+        4.3504,
+        0.0013
+      ],
+      "Brier": [
+        0.97536,
+        0.00058
+      ]
+    }
+  ],
+  "paper_label": "tab:figure2-cifar"
+}

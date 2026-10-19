@@ -1,0 +1,109 @@
+{
+  "columns": [
+    "ECE (%)",
+    "Accuracy (%)",
+    "NLL",
+    "Brier"
+  ],
+  "precision": {
+    "ECE (%)": 3,
+    "Accuracy (%)": 2,
+    "NLL": 4,
+    "Brier": 4
+  },
+  "rows": [
+    {
+      "key": [
+        "Gaussian",
+        "EuroSAT \u00b7 ResNet-18",
+        "Gaussian"
+      ],
+      "ECE (%)": [
+        0.372,
+        0.113
+      ],
+      "Accuracy (%)": [
+        94.58,
+        0.17
+      ],
+      "NLL": [
+        0.1533,
+        0.0044
+      ],
+      "Brier": [
+        0.0804,
+        0.0024
+      ]
+    },
+    {
+      "key": [
+        "Gaussian",
+        "EuroSAT \u00b7 ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        0.442,
+        0.065
+      ],
+      "Accuracy (%)": [
+        94.65,
+        0.08
+      ],
+      "NLL": [
+        0.1528,
+        0.0033
+      ],
+      "Brier": [
+        0.0801,
+        0.0015
+      ]
+    },
+    {
+      "key": [
+        "LogGamma",
+        "EuroSAT \u00b7 ResNet-18",
+        "Gaussian"
+      ],
+      "ECE (%)": [
+        0.449,
+        0.081
+      ],
+      "Accuracy (%)": [
+        94.73,
+        0.2
+      ],
+      "NLL": [
+        0.152,
+        0.0055
+      ],
+      "Brier": [
+        0.0795,
+        0.0029
+      ]
+    },
+    {
+      "key": [
+        "LogGamma",
+        "EuroSAT \u00b7 ResNet-18",
+        "GW"
+      ],
+      "ECE (%)": [
+        0.407,
+        0.102
+      ],
+      "Accuracy (%)": [
+        94.61,
+        0.18
+      ],
+      "NLL": [
+        0.1535,
+        0.0042
+      ],
+      "Brier": [
+        0.0807,
+        0.0022
+      ]
+    }
+  ],
+  "paper_label": "tab:figure4-results"
+}

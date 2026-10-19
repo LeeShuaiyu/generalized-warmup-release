@@ -1,8 +1,9 @@
 # Downloads
 
-The original result ZIP is stored at the fixed Hugging Face revision.
-Replacement model parts are separated by experiment and remain local until
-a real uploaded revision is verified. No new model URL is inferred.
+The result ZIP and all 50 experiment-specific model TAR archives are stored
+in [the private asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets/tree/f39722b4b1e922c4122c25528f14a7c3ce8a4a2d)
+at fixed revision `f39722b4b1e922c4122c25528f14a7c3ce8a4a2d`. All remote archive sizes and LFS SHA256 values
+match the audited catalogs. The URL maps reference that exact snapshot.
 Preparation checks archive size/SHA256 and extracted file identities before
 installation; existing conflicting files are not overwritten.
 
@@ -67,4 +68,4 @@ denied access is expected, not evidence of another upload failure.
 Provider images are obtained separately under [their terms](../data/README.md).
 The model/result hosting does not imply a Zenodo DOI or a license grant.
 
-New experiment-specific model parts are not uploaded yet. `artifacts/model_urls.json` is empty deliberately; use authorized local archives. Rebind links only after checking the actual uploaded revision and hashes.
+All archive links are bound to the verified private snapshot. Anonymous access, full fresh download/restore and checkpoint inference remain separate checks; remote identity verification alone does not establish those results.

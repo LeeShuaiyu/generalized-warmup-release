@@ -48,11 +48,14 @@ An already downloaded archive can be imported with
 `python scripts/prepare_results.py --archive /path/to/gw-results.zip`.
 Existing files are checked and reused; conflicting files are not replaced.
 
-The result catalog points to an existing fixed Hugging Face commit. New experiment-specific model archives have been prepared locally; their URL map is intentionally empty until they are uploaded and a real fixed revision is verified. This candidate's
-asset repository is private; anonymous download is not yet enabled. Until
-public access is approved, download through your authorized browser session
-and use the local archive/parts options below. Browser login is not shared
-with the Python scripts.
+The result archive and all 50 experiment-specific model archive parts have
+been uploaded to [the private asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets).
+Remote archive sizes and SHA256 values match the release catalogs, which pin
+revision `f39722b4b1e922c4122c25528f14a7c3ce8a4a2d`.
+Anonymous download has not been verified. During private preparation, download
+through your authorized browser session and use the local archive/parts options
+below; the Python scripts have no access to that browser session.
+Licensing and public release are pending author confirmation.
 
 To inspect the exact files and transfer size without downloading:
 
@@ -131,4 +134,4 @@ Author and software metadata are in [CITATION.cff](CITATION.cff).
 
 ## Submission alignment update (19 October 2026)
 
-The default paper gallery uses the four figures submitted on 18 October 2026. See [figure mapping](docs/SUBMITTED_FIGURES.md) and [numerical-source policy](docs/NUMERICAL_SOURCES.md). Old quantitative component IDs are preserved separately. New model parts are local candidates, not yet published; use the local `--packages-dir` workflow. No new anonymous download availability is claimed.
+The default paper gallery uses the four figures submitted on 18 October 2026. See [figure mapping](docs/SUBMITTED_FIGURES.md) and [numerical-source policy](docs/NUMERICAL_SOURCES.md). Old quantitative component IDs are preserved separately. All 50 model parts and the result archive are stored at the verified private HF revision recorded above. Use the local `--packages-dir` workflow during private access. Remote archive identities are verified; full fresh download/restore and checkpoint inference have not been newly validated for this snapshot.

@@ -6157,18 +6157,20 @@
         "sha256": "e89ddb0a34ad3cb6691e791476258a4ca85e00bfb38f0c57f4c1f0e7c83ba0af"
       }
     ],
-    "url": "https://huggingface.co/kanadelsy/gw-assets-test-20261010/resolve/05d6e478c6297314aa34c8089d58a1be7f73fbe6/gw-results.zip"
+    "url": "https://huggingface.co/kanadelsy/generalized-warmup-assets/resolve/f39722b4b1e922c4122c25528f14a7c3ce8a4a2d/gw-results.zip"
   },
   "hosting": {
     "provider": "huggingface",
-    "repository": "kanadelsy/gw-assets-test-20261010",
-    "revision": "05d6e478c6297314aa34c8089d58a1be7f73fbe6",
+    "repository": "kanadelsy/generalized-warmup-assets",
+    "revision": "f39722b4b1e922c4122c25528f14a7c3ce8a4a2d",
     "visibility": "private",
     "anonymous_download_verified": false
   },
   "model_candidate": {
-    "status": "local_not_uploaded",
+    "status": "private_uploaded_verified",
     "layout": "one experiment per archive",
-    "urls_bound": false
+    "urls_bound": true,
+    "model_parts": 50,
+    "checkpoints": 388
   }
 }

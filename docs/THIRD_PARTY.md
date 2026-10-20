@@ -1,5 +1,10 @@
 # Third-party materials
 
+The project's original software and associated software documentation use
+the MIT License in `LICENSE`. That grant covers only rights held by the
+project's contributors. It does not replace any third-party license or grant
+rights to the separate model/result archives; their licensing remains pending.
+
 Dataset images are obtained from the original providers, not covered by the
 software license. Provider links and input preparation are in `data/README.md`.
 Dataset-specific source identities are retained in the sample manifests.

@@ -55,7 +55,8 @@ revision `f39722b4b1e922c4122c25528f14a7c3ce8a4a2d`.
 Anonymous download has not been verified. During private preparation, download
 through your authorized browser session and use the local archive/parts options
 below; the Python scripts have no access to that browser session.
-Licensing and public release are pending author confirmation.
+The project's original software is MIT licensed; see the scope below.
+Licensing of the separate model/result assets and public release remain pending.
 
 To inspect the exact files and transfer size without downloading:
 
@@ -127,6 +128,17 @@ and model identities remain in the machine-readable configurations.
 
 Model weights and the result archive are distributed separately from the
 GitHub code. Original third-party datasets retain their providers' terms.
+
+## License
+
+The project's original software and associated software documentation are
+licensed under the [MIT License](LICENSE). Third-party code and dependencies
+retain their applicable licenses and notices.
+
+This software license does not grant rights to the separately distributed
+model checkpoints, experimental data/results, or third-party images and
+image-derived materials. Separate asset licensing remains pending; see
+[third-party materials](docs/THIRD_PARTY.md).
 
 ## Citation
 

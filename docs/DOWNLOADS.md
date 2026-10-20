@@ -67,5 +67,7 @@ denied access is expected, not evidence of another upload failure.
 
 Provider images are obtained separately under [their terms](../data/README.md).
 The model/result hosting does not imply a Zenodo DOI or a license grant.
+The code's MIT License does not extend to these separate archives;
+their licensing remains pending.
 
 All archive links are bound to the verified private snapshot. Anonymous access, full fresh download/restore and checkpoint inference remain separate checks; remote identity verification alone does not establish those results.

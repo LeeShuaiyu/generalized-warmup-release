@@ -1,146 +1,83 @@
 # Generalized Warm-up
 
-Code and paper notebooks for *Generalized warm-up for confidence calibration
-of deep neural network classifiers*.
+**Generalized warm-up for confidence calibration of deep neural network classifiers**
 
-## Results
+Shuai-Yu Li · Xin-Chao Wang · Yu-Ying Song · Si-Wei Chen
 
-Open a notebook to view its saved tables and figures. Each page contains the
-paper reference, reproduced results, and the corresponding executable steps.
+[Overview](#overview) · [Quick start](#quick-start) · [Results and models](#results-and-models) · [Citation](#citation) · [License](#license)
 
-| Experiment | Notebook |
-|---|---|
-| Random initialization | [Main results](notebooks/main_random.ipynb) |
-| ImageNet initialization | [Main results](notebooks/main_pretrained.ipynb) |
-| Calibration combinations | [Main results](notebooks/main_compatibility.ipynb) |
-| Initialization bias | [Mechanism](notebooks/s2_initialization.ipynb) |
-| Directional response | [Mechanism](notebooks/s2_direction.ipynb) |
-| CIFAR-100 | [Three and ten seeds](notebooks/cifar100.ipynb) |
-| Optical noise domains | [Results and paired interaction](notebooks/s3_noise.ipynb) |
-| Homogeneous-region distributions | [Distribution fitting](notebooks/s4_fit.ipynb) |
-| Warm-up constructions | [Distribution comparison](notebooks/s4_family.ipynb) |
-| Warm-up duration | [Duration comparison](notebooks/s7_length.ipynb) |
-| Paper figures | [Four submitted figures](notebooks/paper_figures.ipynb) |
+## Overview
 
-The complete metric tables are included within the main pages. Settings and
-sample splits are available in `configs/` and `data/manifests/`.
+Generalized warm-up prepares a classifier with uniform targets before supervised
+learning. Its inputs combine a Gaussian base with a statistics-guided component
+constructed from approximately homogeneous regions of training images.
+This repository provides the method implementation, experiment configurations,
+model checkpoints and executable notebooks for the paper.
 
-## Start
+![Generalized warm-up: fluctuation statistics, input construction and uniform-target warm-up.](assets/submitted/figure4.png)
 
-Use Python 3.12. From the project root:
+*Method overview. Training-image fluctuation statistics guide input construction;
+uniform-target warm-up precedes supervised learning on labelled data.*
+
+## Quick start
+
+Use **Python 3.12**. The following commands install the notebook environment,
+download the result archive and open the paper notebooks:
 
 ```sh
-python -m venv .venv
-# Linux/macOS:
+git clone https://github.com/LeeShuaiyu/generalized-warmup-release.git
+cd generalized-warmup-release
+python3.12 -m venv .venv
 source .venv/bin/activate
-# Windows: .venv\Scripts\activate
 python -m pip install -e '.[notebook]'
 python scripts/prepare_results.py
 python -m jupyterlab notebooks/
 ```
 
-Run the notebook cells from top to bottom to recompute its tables from the
-released predictions and source measurements. This step runs on a CPU using
-the result archive. Reference values are available in folded tables.
+On Windows, create the environment with `py -3.12 -m venv .venv` and activate it
+with `.venv\Scripts\activate` in Command Prompt.
 
-The result archive uses the fixed download catalog in `artifacts/downloads.json`.
-An already downloaded archive can be imported with
-`python scripts/prepare_results.py --archive /path/to/gw-results.zip`.
-Existing matching files are reused; conflicting files stop preparation.
+Run notebook cells to recompute tables from the released predictions and source
+measurements on a CPU. Start with the [random-initialization results](notebooks/main_random.ipynb),
+[ImageNet-initialization results](notebooks/main_pretrained.ipynb), or
+[paper figures](notebooks/paper_figures.ipynb).
 
-The [asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets)
-contains the result archive and 50 model archive parts, pinned to revision
-`b5655af5c6800f9b853fe961a2b0f41aaf5d0eaf`.
-Use the preparation commands to download the selected assets. Local archives
-are supported through `--archive` for results and `--packages-dir` for models.
+See [all experiments](docs/EXPERIMENTS.md), [usage](docs/USAGE.md) and
+[environments](docs/ENVIRONMENTS.md) for additional workflows.
 
-To inspect the exact files and transfer size without downloading:
+## Results and models
+
+The [Hugging Face asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets)
+contains the **305 MB result archive** and **388 model checkpoints in 50 archives**.
+Preparation commands use fixed download versions and verify file sizes and hashes.
+Model downloads can be selected by experiment:
 
 ```sh
-python scripts/plan_downloads.py --results-only
 python scripts/plan_downloads.py --experiment s4_family
-```
-
-Saved-table recomputation uses the 305 MB result archive. Model preparation
-fetches the archive parts for the selected experiment. The plan reports archive
-download sizes and extracted checkpoint sizes.
-
-## Checkpoint inference
-
-Install the inference environment, prepare models, then obtain the corresponding
-images following [Data preparation](data/README.md).
-
-```sh
-python -m pip install -r requirements/cuda.txt
 python scripts/prepare_assets.py --experiment s4_family \
-  --package-index artifacts/model_packages.json --packages-dir /path/to/model-parts
-python scripts/prepare_assets.py --experiment s4_family --check
+  --package-index artifacts/model_packages.json --url-index artifacts/model_urls.json
 ```
 
-Models are downloaded by experiment and verified before loading. Set
-`RUN_INFERENCE = True` in the notebook's **Inference** section to run its
-prepared checkpoints. `device='auto'` selects CUDA when available, otherwise
-CPU. New predictions are written under `output/`. Use the Inference section
-to generate new model predictions.
-
-For the ImageNet page, use the matched prediction environment described in
-[Environments](docs/ENVIRONMENTS.md).
-
-An offline model-parts directory is also supported:
-
-```sh
-python scripts/prepare_assets.py --experiment s4_family \
-  --package-index artifacts/model_packages.json --packages-dir /path/to/model-parts
-```
-
-Details and experiment IDs are in [Downloads](docs/DOWNLOADS.md).
-
-## Training and fitting
-
-Run one registered training configuration:
-
-```sh
-python scripts/train_classification.py --experiment random --run-id 010 --device auto
-```
-
-Other experiments provide training or fitting cells on their notebook pages.
-The distribution-fitting page provides **Region selection** and **Refit**
-entries for the fixed training-image regions. These require the relevant
-provider images or prepared pixel blocks. Parameter, seed, input-processing,
-and model identities remain in the machine-readable configurations.
-
-## Files
-
-| Location | Content |
-|---|---|
-| `src/gw/` | Method, training, inference, metrics and fitting |
-| `scripts/` | Data, asset and experiment entry points |
-| `configs/` | Experiment settings and seeds |
-| `data/` | Provider links, fixed splits and file identities |
-| `notebooks/` | Saved, executable paper results |
-| `results/paper/` | Paper reference tables |
-| `artifacts/` | Download and verification catalogs |
-| `tests/` | Integrity and reproducibility checks |
-
-Model weights and the result archive are distributed separately from the
-GitHub code. Original third-party datasets retain their providers' terms.
-
-## License
-
-The project's original software and associated software documentation are
-licensed under the [MIT License](LICENSE). Third-party code and dependencies
-retain their applicable licenses and notices.
-
-Contributor-owned model weights use MIT. Original numerical result data use
-CC BY 4.0. See [Licenses](LICENSES.md) for file scope and attribution.
-Third-party materials retain their [applicable terms](docs/THIRD_PARTY.md).
+For checkpoint inference, follow [Usage](docs/USAGE.md#checkpoint-inference)
+and [Data preparation](data/README.md). The [download guide](docs/DOWNLOADS.md)
+covers archive sizes, fixed versions and offline preparation.
 
 ## Citation
 
-Author and software metadata are in [CITATION.cff](CITATION.cff).
+Software citation metadata are available in [CITATION.cff](CITATION.cff).
 
-## Paper figures
+```bibtex
+@software{li2026generalizedwarmup,
+  author = {Li, Shuai-Yu and Wang, Xin-Chao and Song, Yu-Ying and Chen, Si-Wei},
+  title = {Generalized warm-up for confidence calibration of deep neural network classifiers},
+  year = {2026},
+  url = {https://github.com/LeeShuaiyu/generalized-warmup-release}
+}
+```
 
-The paper gallery contains four figures. See the [figure mapping](docs/SUBMITTED_FIGURES.md)
-and [numerical sources](docs/NUMERICAL_SOURCES.md) for the corresponding data and
-quantitative components.
+## License
+
+Original software and associated documentation use [MIT](LICENSE).
+Contributor-owned model weights use [MIT](LICENSE-MODELS); original numerical
+result data use [CC BY 4.0](LICENSE-RESULTS). See [license scope and attribution](LICENSES.md)
+and [third-party terms](docs/THIRD_PARTY.md).

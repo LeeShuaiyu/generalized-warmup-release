@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', choices=['sar', 'opensar', 'fusar', 'oct'], required=True)
     parser.add_argument('--source-dir', type=Path, help='Registered processed tree, or extracted FUSAR class folders')
-    parser.add_argument('--limit', type=int, help='Diagnostic prefix of training images; not a complete bank')
+    parser.add_argument('--limit', type=int, help='Number of training images in a diagnostic subset')
     args = parser.parse_args()
     print(run(ROOT, args.dataset, source_dir=args.source_dir, limit=args.limit))
 

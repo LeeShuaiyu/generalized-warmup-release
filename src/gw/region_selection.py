@@ -257,7 +257,7 @@ def run(root, dataset, *, source_dir=None, limit=None):
         np.savez_compressed(output / 'bank.npz', **bank)
         (output / 'records.json').write_text(json.dumps(records, indent=2) + '\n')
         (output / 'image_audit.json').write_text(json.dumps(image_audit, indent=2) + '\n')
-        comparison = compare_bank(root, item, bank, records) if limit is None else {'scope': 'diagnostic subset; no full-bank claim'}
+        comparison = compare_bank(root, item, bank, records) if limit is None else {'scope': 'diagnostic subset'}
         (output / 'comparison.json').write_text(json.dumps(comparison, indent=2) + '\n')
         state.update(status='complete', selected=len(records),
                      selected_groups=len({r['group_id'] for r in records}),

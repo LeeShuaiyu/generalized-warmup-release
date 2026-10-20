@@ -1,9 +1,12 @@
 from pathlib import Path
 import hashlib
+import errno
+import io
 import tempfile
 import unittest
 import zipfile
 import sys
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from gw.result_packages import prepare
@@ -41,6 +44,16 @@ class ResultPackages(unittest.TestCase):
         with self.assertRaises(ValueError):
             prepare(self.root, index, archive_path=self.archive, reserve_bytes=0)
         self.assertEqual(list(self.root.iterdir()), [])
+
+    def test_download_and_import_on_filesystem_without_hardlinks(self):
+        index = self.package()
+        index['results']['url'] = 'https://example.org/results.zip'
+        class Response(io.BytesIO):
+            def geturl(self): return 'https://example.org/results.zip'
+        with patch('gw._files.os.link', side_effect=OSError(errno.ENOTSUP, 'link')):
+            with patch('gw.result_packages.urllib.request.urlopen', return_value=Response(self.archive.read_bytes())):
+                self.assertEqual(prepare(self.root, index, reserve_bytes=0)['imported'], 2)
+        self.assertEqual((self.root/'results/test.json').read_bytes(), b'{"value":1}')
 
     def test_content_hash_checked_before_writes(self):
         index = self.package()

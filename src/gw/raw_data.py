@@ -17,6 +17,7 @@ import numpy as np
 from PIL import Image
 
 from .assets import file_hash, relative_path
+from ._files import install_verified_file
 from .classification_data import load_manifest, manifest_sha256
 
 
@@ -156,7 +157,7 @@ def _save_verified(destination, payload, expected_hash):
     try:
         with os.fdopen(descriptor, 'wb') as stream:
             stream.write(payload)
-        os.link(temporary, destination)  # No replacement, including racing writers.
+        install_verified_file(temporary, destination, reserve_bytes=8 * 1024**3)
     finally:
         temporary.unlink(missing_ok=True)
     return digest

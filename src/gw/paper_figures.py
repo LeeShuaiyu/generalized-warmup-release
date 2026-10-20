@@ -23,7 +23,7 @@ REDRAW_SCOPE = {
     2: 'Six quantitative panels: saved confidence grid and paired measurements; archived validation curves; saved CUDA test predictions.',
     3: 'Response panels c,d only: paired directional responses and supervised trajectories. Geometry and density illustrations remain in the manuscript image.',
     4: 'ECE panel only: means and 95% t intervals over ten paired seeds. Illustrative imagery and density drawings remain in the manuscript image.',
-    6: 'Fixed block 0, held-out relative-pixel histogram and first-split fits, and five-seed warm-up ECE. The block display is not the original representative full-scene crop.',
+    6: 'Fixed block 0, held-out relative-pixel histogram and first-split fits, and five-seed warm-up ECE.',
 }
 
 

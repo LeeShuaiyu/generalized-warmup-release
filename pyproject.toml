@@ -7,13 +7,13 @@ name = "generalized-warmup"
 version = "0.1.0.dev0"
 description = "Generalized warm-up for classifier confidence calibration"
 license = {file = "LICENSE"}
-requires-python = ">=3.12"
-dependencies = ["numpy>=1.26", "pandas>=2.1", "matplotlib>=3.8", "Pillow>=10", "scipy>=1.11"]
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=1.26,<2", "pandas>=2.1", "matplotlib>=3.8", "Pillow>=10", "scipy>=1.11"]
 
 [project.optional-dependencies]
 notebook = ["nbformat>=5.10", "nbclient>=0.10", "nbconvert>=7.16", "ipykernel>=6", "jupyterlab>=4"]
 inference = ["torch==2.3.0", "torchvision==0.18.0"]
-data = ["tifffile>=2024.1", "imagecodecs>=2024.1"]
+data = ["tifffile==2024.2.12", "imagecodecs==2024.6.1"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

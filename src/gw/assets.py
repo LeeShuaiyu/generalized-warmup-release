@@ -7,6 +7,7 @@ import shutil
 import tempfile
 import urllib.parse
 import urllib.request
+from ._files import install_verified_file
 
 
 def file_hash(path):
@@ -133,8 +134,7 @@ def prepare(root, *, experiment=None, source_root=None, urls=None):
                 output.flush()
                 os.fsync(output.fileno())
             verify(temporary, item)
-            # Atomic, fail-if-exists publication: never replace a concurrent file.
-            os.link(temporary, destination)
+            install_verified_file(temporary, destination, reserve_bytes=1024**3)
             records.append({'id': key, 'status': 'prepared'})
         finally:
             temporary.unlink(missing_ok=True)

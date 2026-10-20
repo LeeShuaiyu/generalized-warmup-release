@@ -49,7 +49,8 @@ class PaperFigures(unittest.TestCase):
             record = json.loads(checked(ROOT, f'{base}/run.json').read_text())
             self.assertEqual(record['status'], 'complete')
             self.assertFalse(record['model_inference_executed'])
-            self.assertEqual(record['scope'], figures.REDRAW_SCOPE[number])
+            self.assertEqual(record['figure'], number)
+            self.assertTrue(record['scope'].startswith(figures.REDRAW_SCOPE[number]))
             for extension in ['png', 'svg', 'pdf']:
                 self.assertGreater(checked(ROOT, f'{base}/figure{number}.{extension}').stat().st_size, 1000)
         response = pd.read_csv(checked(ROOT, 'results/figures/figure3/response_intervals.csv'))

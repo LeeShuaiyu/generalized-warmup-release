@@ -6157,12 +6157,12 @@
         "sha256": "e89ddb0a34ad3cb6691e791476258a4ca85e00bfb38f0c57f4c1f0e7c83ba0af"
       }
     ],
-    "url": "https://huggingface.co/kanadelsy/generalized-warmup-assets/resolve/f39722b4b1e922c4122c25528f14a7c3ce8a4a2d/gw-results.zip"
+    "url": "https://huggingface.co/kanadelsy/generalized-warmup-assets/resolve/41026c835ed3bc2a2d293a5eb6c951ecb8b69079/gw-results.zip"
   },
   "hosting": {
     "provider": "huggingface",
     "repository": "kanadelsy/generalized-warmup-assets",
-    "revision": "f39722b4b1e922c4122c25528f14a7c3ce8a4a2d",
+    "revision": "41026c835ed3bc2a2d293a5eb6c951ecb8b69079",
     "visibility": "private",
     "anonymous_download_verified": false
   },

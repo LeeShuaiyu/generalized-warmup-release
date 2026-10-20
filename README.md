@@ -27,7 +27,7 @@ sample splits are available in `configs/` and `data/manifests/`.
 
 ## Start
 
-Use Python 3.12 or later. From the project root:
+Use Python 3.12. From the project root:
 
 ```sh
 python -m venv .venv
@@ -40,23 +40,19 @@ python -m jupyterlab notebooks/
 ```
 
 Run the notebook cells from top to bottom to recompute its tables from the
-released predictions and source measurements. This step does not require a
-GPU or the original image datasets. Reference values are available in folded tables.
+released predictions and source measurements. This step runs on a CPU using
+the result archive. Reference values are available in folded tables.
 
 The result archive uses the fixed download catalog in `artifacts/downloads.json`.
 An already downloaded archive can be imported with
 `python scripts/prepare_results.py --archive /path/to/gw-results.zip`.
-Existing files are checked and reused; conflicting files are not replaced.
+Existing matching files are reused; conflicting files stop preparation.
 
-The result archive and all 50 experiment-specific model archive parts have
-been uploaded to [the private asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets).
-Remote archive sizes and SHA256 values match the release catalogs, which pin
-revision `f39722b4b1e922c4122c25528f14a7c3ce8a4a2d`.
-Anonymous download has not been verified. During private preparation, download
-through your authorized browser session and use the local archive/parts options
-below; the Python scripts have no access to that browser session.
-The project's original software is MIT licensed; see the scope below.
-Licensing of the separate model/result assets and public release remain pending.
+The [asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets)
+contains the result archive and 50 model archive parts, pinned to revision
+`41026c835ed3bc2a2d293a5eb6c951ecb8b69079`.
+During private access, download with an authorized browser session and use
+`--archive` for results or `--packages-dir` for models.
 
 To inspect the exact files and transfer size without downloading:
 
@@ -65,9 +61,9 @@ python scripts/plan_downloads.py --results-only
 python scripts/plan_downloads.py --experiment s4_family
 ```
 
-Saved-table recomputation needs only the 305 MB result archive, not model
-weights. Model preparation downloads only archive parts containing the selected
-experiment and imports only its models. Each new model part contains exactly one experiment. The plan reports full archive sizes, not just the selected checkpoint bytes.
+Saved-table recomputation uses the 305 MB result archive. Model preparation
+fetches the archive parts for the selected experiment. The plan reports archive
+download sizes and extracted checkpoint sizes.
 
 ## Checkpoint inference
 
@@ -84,8 +80,8 @@ python scripts/prepare_assets.py --experiment s4_family --check
 Models are downloaded by experiment and verified before loading. Set
 `RUN_INFERENCE = True` in the notebook's **Inference** section to run its
 prepared checkpoints. `device='auto'` selects CUDA when available, otherwise
-CPU. New predictions are written under `output/` and do not replace the
-released results. Use the Inference section to generate new model predictions.
+CPU. New predictions are written under `output/`. Use the Inference section
+to generate new model predictions.
 
 For the ImageNet page, use the matched prediction environment described in
 [Environments](docs/ENVIRONMENTS.md).
@@ -135,15 +131,15 @@ The project's original software and associated software documentation are
 licensed under the [MIT License](LICENSE). Third-party code and dependencies
 retain their applicable licenses and notices.
 
-This software license does not grant rights to the separately distributed
-model checkpoints, experimental data/results, or third-party images and
-image-derived materials. Separate asset licensing remains pending; see
-[third-party materials](docs/THIRD_PARTY.md).
+Model/result asset licensing is listed in [Downloads](docs/DOWNLOADS.md).
+Third-party materials retain their [applicable terms](docs/THIRD_PARTY.md).
 
 ## Citation
 
 Author and software metadata are in [CITATION.cff](CITATION.cff).
 
-## Submission alignment update (19 October 2026)
+## Paper figures
 
-The default paper gallery uses the four figures submitted on 18 October 2026. See [figure mapping](docs/SUBMITTED_FIGURES.md) and [numerical-source policy](docs/NUMERICAL_SOURCES.md). Old quantitative component IDs are preserved separately. All 50 model parts and the result archive are stored at the verified private HF revision recorded above. Use the local `--packages-dir` workflow during private access. Remote archive identities are verified; full fresh download/restore and checkpoint inference have not been newly validated for this snapshot.
+The paper gallery contains four figures. See the [figure mapping](docs/SUBMITTED_FIGURES.md)
+and [numerical sources](docs/NUMERICAL_SOURCES.md) for the corresponding data and
+quantitative components.

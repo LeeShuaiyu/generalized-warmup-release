@@ -11,13 +11,10 @@ source PDF SHA256 and four image hashes. PDF crops preserve submitted labels.
 | 3 | 4, 6 | optical-noise ECE, local fits and warm-up-family ECE |
 | 4 | none | generalized warm-up framework schematic |
 
-The historic component catalog and generator APIs remain in
-`configs/quantitative_components.json` and `gw.paper_figures`; their identifiers
-are not submitted figure numbers. `gw.submitted_figures` is the current gallery
-and export interface. Quantitative regeneration produces separate components;
-it does not claim exact recreation of the submitted composite layout.
+The quantitative component catalog and generator APIs are in
+`configs/quantitative_components.json` and `gw.paper_figures`.
+`gw.submitted_figures` provides the four-figure gallery and export interface.
+The component generators export the quantitative panels listed above.
 
-The author confirmed that the paper illustrations were generated using GPT.
-This provenance statement applies to illustrations; measured image pixels,
-dataset samples and pretraining sources retain their existing provenance.
-Additional sample metadata is retained at the author's request.
+The schematic illustrations were generated using GPT. Dataset images and
+pretraining sources are documented in `data/README.md` and `docs/THIRD_PARTY.md`.

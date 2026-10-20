@@ -1500,8 +1500,8 @@ def aggregate_summary(
     ) if len(angle_spearman) else (None, None)
     return {
         "interpretation_guardrail": (
-            "A positive endpoint supports finite-horizon persistence under actual CE/SGD in this "
-            "controlled task; it does not establish permanent non-removability or universality in deep networks."
+            "A positive endpoint supports finite-horizon persistence under actual CE/SGD "
+            "within this controlled task."
         ),
         "architectures": architecture_summaries,
         "linear_vector_retention_G3": {

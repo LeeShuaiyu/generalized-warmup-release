@@ -24,10 +24,9 @@ def open_anonymous(url, method='GET'):
     except urllib.error.HTTPError as error:
         code = error.code
         error.close()
-        raise RuntimeError(f'Anonymous HF check denied (HTTP {code}); '
-                           'private upload is not public download readiness') from None
+        raise RuntimeError(f'Anonymous HF check denied (HTTP {code})') from None
     except urllib.error.URLError:
-        raise RuntimeError('Anonymous HF check could not connect; no readiness claim') from None
+        raise RuntimeError('Anonymous HF connection failed') from None
 
 
 def check(root):
@@ -42,7 +41,7 @@ def check(root):
     with open_anonymous(f'https://huggingface.co/api/models/{repo}/revision/{revision}') as response:
         metadata = json.load(response)
     if metadata.get('private') is not False or metadata.get('sha') != revision:
-        raise ValueError('Anonymous repository metadata does not establish public fixed revision')
+        raise ValueError('Expected public repository metadata at the registered revision')
     parts = json.loads((root / 'artifacts/model_packages.json').read_text())['parts']
     urls = json.loads((root / 'artifacts/model_urls.json').read_text())
     if set(urls) != {row['file'] for row in parts}:

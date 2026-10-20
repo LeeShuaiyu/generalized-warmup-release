@@ -2,13 +2,13 @@
 
 ## Notebook results
 
-Python 3.12 or later; `python -m pip install -e '.[notebook]'`.
-Result-table aggregation does not require CUDA. Launch Jupyter from the project
-root after importing the result archive.
+Python 3.12; `python -m pip install -e '.[notebook]'`.
+Result-table aggregation runs on a CPU. Launch Jupyter from the project root
+after importing the result archive.
 
 ## Checkpoint inference
 
-The default recorded CUDA environment is pinned in `requirements/cuda.txt`
+The CUDA inference environment is pinned in `requirements/cuda.txt`
 (Python 3.12, PyTorch 2.3, CUDA 12.1). CPU can also be selected explicitly;
 `device='auto'` uses CUDA when it is available.
 
@@ -20,7 +20,7 @@ logits in `scripts/refit_calibration.py`.
 
 The ImageNet-initialized SAR checkpoints have a separate recorded prediction
 runtime, pinned in `requirements/replay-cuda.txt` (Python 3.10, PyTorch 2.11,
-CUDA 12.8). To use this runtime without changing the notebook environment:
+CUDA 12.8). Create a separate prediction environment:
 
 ```sh
 python3.10 -m venv .venv-prediction
@@ -31,8 +31,7 @@ python -m jupyterlab notebooks/
 ```
 
 The ImageNet page invokes this interpreter for checkpoint inference, then
-returns the numerical results to the notebook. It does not install the
-Python-3.12 notebook package in the Python-3.10 prediction environment.
+returns the numerical results to the notebook.
 For a direct prediction-only call:
 
 ```sh

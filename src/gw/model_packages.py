@@ -9,6 +9,7 @@ import urllib.parse
 import urllib.request
 
 from .assets import file_hash, read_catalog, relative_path, select_assets, verify
+from ._files import install_verified_file
 
 
 def load_index(root, index):
@@ -41,7 +42,7 @@ def load_index(root, index):
     return index
 
 
-def _part_file(cache, part, url):
+def _part_file(cache, part, url, *, reserve_bytes=8*1024**3):
     target = cache/part['file']
     if target.exists() or target.is_symlink():
         verify(target,part)
@@ -66,7 +67,7 @@ def _part_file(cache, part, url):
             output.flush()
             os.fsync(output.fileno())
         verify(temporary,part)
-        os.link(temporary,target)
+        install_verified_file(temporary,target,reserve_bytes=reserve_bytes)
         return target
     finally:
         temporary.unlink(missing_ok=True)
@@ -87,10 +88,10 @@ def _check_members(path,part):
 
 
 def prepare(root, index, *, experiment=None, packages_dir=None, urls=None, reserve_bytes=8*1024**3):
-    """Verify parts and atomically prepare one experiment without overwriting files.
+    """Verify parts and prepare one experiment with exclusive file creation.
 
-    The asset catalog, not the supplied archive, determines model destinations
-    and expected bytes. HTTPS URLs must be supplied explicitly or in the index.
+    The asset catalog determines model destinations and expected bytes.
+    HTTPS URLs must be supplied explicitly or in the index.
     """
     root = Path(root).resolve()
     index = load_index(root,index)
@@ -135,7 +136,8 @@ def prepare(root, index, *, experiment=None, packages_dir=None, urls=None, reser
             raise ValueError('Model package downloads require HTTPS')
     prepared_parts = []
     for part in needed:
-        archive_path = _part_file(cache,part,urls.get(part['file'],part.get('url')))
+        archive_path = _part_file(cache,part,urls.get(part['file'],part.get('url')),
+                                  reserve_bytes=reserve_bytes)
         _check_members(archive_path,part)
         prepared_parts.append((part,archive_path))
     for part,archive_path in prepared_parts:
@@ -165,7 +167,7 @@ def prepare(root, index, *, experiment=None, packages_dir=None, urls=None, reser
                         output.flush()
                         os.fsync(output.fileno())
                     verify(temporary,item)
-                    os.link(temporary,target)
+                    install_verified_file(temporary,target,reserve_bytes=reserve_bytes)
                     records.append(dict(id=key,status='prepared_from_package',package=part['file']))
                 finally:
                     temporary.unlink(missing_ok=True)

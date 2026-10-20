@@ -9,6 +9,7 @@ import tempfile
 import urllib.parse
 import urllib.request
 import zipfile
+from ._files import install_verified_file
 
 RESERVE = 8 * 1024**3
 
@@ -80,7 +81,7 @@ def download(root, item, *, reserve_bytes=RESERVE):
             output.flush()
             os.fsync(output.fileno())
         verify(temporary, item)
-        os.link(temporary, target)
+        install_verified_file(temporary, target, reserve_bytes=reserve_bytes)
         return target
     finally:
         temporary.unlink(missing_ok=True)
@@ -155,7 +156,7 @@ def prepare(root, index, *, archive_path=None, check=False, reserve_bytes=RESERV
                     output.flush()
                     os.fsync(output.fileno())
                 verify(temporary, entry)
-                os.link(temporary, target)
+                install_verified_file(temporary, target, reserve_bytes=reserve_bytes)
             finally:
                 temporary.unlink(missing_ok=True)
     return dict(verified=len(expected), imported=len(missing), reused=len(expected) - len(missing))

@@ -7,6 +7,7 @@ import shutil
 import tempfile
 
 from .assets import file_hash, relative_path
+from ._files import install_verified_file
 from .classification_data import manifest_sha256
 
 
@@ -102,7 +103,7 @@ def prepare(root, dataset, source_root=None, *, check=False, split=None):
                 shutil.copyfileobj(input_stream, output_stream)
             if file_hash(temporary) != expected_hash:
                 raise ValueError('Copied data file is inconsistent')
-            os.link(temporary, destination)
+            install_verified_file(temporary, destination, reserve_bytes=8 * 1024**3)
             counts['prepared'] += 1
         finally:
             temporary.unlink(missing_ok=True)

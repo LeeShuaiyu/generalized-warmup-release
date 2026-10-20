@@ -1,11 +1,10 @@
 # Downloads
 
 The result ZIP and all 50 experiment-specific model TAR archives are stored
-in [the private asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets/tree/f39722b4b1e922c4122c25528f14a7c3ce8a4a2d)
-at fixed revision `f39722b4b1e922c4122c25528f14a7c3ce8a4a2d`. All remote archive sizes and LFS SHA256 values
-match the audited catalogs. The URL maps reference that exact snapshot.
+in [the asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets/tree/41026c835ed3bc2a2d293a5eb6c951ecb8b69079)
+at fixed revision `41026c835ed3bc2a2d293a5eb6c951ecb8b69079`.
 Preparation checks archive size/SHA256 and extracted file identities before
-installation; existing conflicting files are not overwritten.
+installation. Matching files are reused; conflicting files stop preparation.
 
 ## Results
 
@@ -17,8 +16,7 @@ python scripts/plan_downloads.py --results-only
 python scripts/prepare_results.py
 ```
 
-This candidate still references a private asset repository. For private
-access, download the ZIP with your authorized browser session and run:
+For private access, download the ZIP with your authorized browser session:
 
 ```sh
 python scripts/prepare_results.py --archive /path/to/gw-results.zip
@@ -36,7 +34,7 @@ python scripts/prepare_results.py --archive /path/to/gw-results.zip
 | `s4_family` | Warm-up constructions |
 | `s7_length` | Warm-up duration |
 
-Choose an experiment rather than fetching all 33.93 GB:
+Select the experiment to prepare:
 
 ```sh
 python scripts/plan_downloads.py --experiment s4_family --include-results
@@ -45,12 +43,13 @@ python scripts/prepare_assets.py --experiment s4_family \
 ```
 
 The plan reports selected-model bytes separately from required archive bytes.
-Archive parts are separated by experiment; preparation extracts only the selected models. A valid cache is reused. Model files and archive caches
-need additional disk space; preparation keeps an 8 GiB reserve.
+Archive parts are separated by experiment; preparation extracts the selected
+models and reuses a valid cache. Allow space for downloaded archives, extracted
+models and a temporary copy of the largest file, plus an 8 GiB reserve.
+The preparation commands support APFS, NTFS, Linux filesystems and exFAT.
 
 For private access, obtain the listed parts in the authorized browser, keep
-them together, and pass `--packages-dir /path/to/model-parts` instead of
-`--url-index`. The Python scripts do not read browser cookies or create tokens.
+them together, and pass `--packages-dir /path/to/model-parts`.
 
 ## Public-access check
 
@@ -60,14 +59,12 @@ Once public access has been separately approved and enabled:
 python scripts/check_public_downloads.py
 ```
 
-This read-only gate uses anonymous requests and requires public repository
-metadata plus exact size/SHA256 for every formal file. It does not change
-repository visibility or claim a full download/restore test. Before approval,
-denied access is expected, not evidence of another upload failure.
+This read-only check uses anonymous requests to verify public repository
+metadata and the registered size/SHA256 for every archive.
 
 Provider images are obtained separately under [their terms](../data/README.md).
-The model/result hosting does not imply a Zenodo DOI or a license grant.
-The code's MIT License does not extend to these separate archives;
-their licensing remains pending.
 
-All archive links are bound to the verified private snapshot. Anonymous access, full fresh download/restore and checkpoint inference remain separate checks; remote identity verification alone does not establish those results.
+## Asset licensing
+
+Model and result archive licensing is pending author confirmation.
+Provider materials retain their applicable terms in [Third-party materials](THIRD_PARTY.md).

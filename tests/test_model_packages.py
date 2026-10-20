@@ -1,6 +1,7 @@
 from pathlib import Path
 import hashlib
 import io
+import errno
 import json
 import sys
 import tarfile
@@ -55,6 +56,19 @@ class ModelPackages(unittest.TestCase):
     def test_all_registered_models(self):
         self.assertEqual(len(prepare(self.root,self.index,packages_dir=self.cache)),2)
         self.assertTrue(all(row['status']=='verified' for row in inventory(self.root)))
+
+    def test_download_and_import_on_filesystem_without_hardlinks(self):
+        body = self.path.read_bytes()
+        self.path.unlink()
+        class Response(io.BytesIO):
+            def geturl(self): return 'https://example.org/models/part'
+        with patch('gw._files.os.link', side_effect=OSError(errno.ENOTSUP, 'link')):
+            with patch('gw.model_packages.urllib.request.urlopen', return_value=Response(body)):
+                rows = prepare(self.root, self.index, packages_dir=self.cache,
+                               urls={self.path.name:'https://example.org/part'}, reserve_bytes=0)
+        self.assertEqual(len(rows), 2)
+        for name, data in self.bodies.items():
+            self.assertEqual((self.root/name).read_bytes(), data)
 
     def test_existing_invalid_model_is_preserved(self):
         target = self.root/self.items[0]['destination']

@@ -11,6 +11,7 @@ import urllib.request
 import zipfile
 
 from .assets import file_hash, relative_path
+from ._files import install_verified_file
 from .data_assets import prepare
 from .raw_data import audit, convert, registered_rows, source_spec, _save_verified
 
@@ -68,7 +69,7 @@ def download_oct(root):
                     raise RuntimeError('Keep at least 8 GiB available during download')
                 output.write(chunk)
         verify_archive(temporary)
-        os.link(temporary, target)  # Never replace a concurrently created file.
+        install_verified_file(temporary, target, reserve_bytes=RESERVE)
     finally:
         temporary.unlink(missing_ok=True)
     return target

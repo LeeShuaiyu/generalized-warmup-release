@@ -1,7 +1,7 @@
 # Data preparation
 
-The fixed sample lists and splits are in `manifests/`. Processing does not
-resample the splits. `files.json` records each processed file's SHA256.
+The fixed sample lists and splits are in `manifests/`. Processing uses these
+registered splits. `files.json` records each processed file's SHA256.
 
 ## Sources
 
@@ -15,8 +15,7 @@ The paper cites the original providers:
 - [OCTDL](https://doi.org/10.5281/zenodo.10839556)
 
 Obtain third-party images under the provider's terms. The commands below can
-convert extracted provider files or import an existing processed tree. They
-do not bypass provider access or license requirements.
+convert extracted provider files or import an existing processed tree.
 
 ## Original files
 
@@ -59,12 +58,12 @@ python scripts/prepare_original.py --dataset oct --archive /path/to/OCTDL.zip
 The archive is cached in `data/downloads/`; unpacking writes a new directory
 under `output/provider_data/`. Only the registered JPEGs are copied; ZIP links
 and unsafe paths are rejected. Other providers retain their own acquisition
-procedures; no restricted-download automation is assumed.
+procedures.
 
 Each conversion creates `output/data_conversion/<run>/files/` and a conversion
-record. All generated files must match the registered SHA256. No source or
-previous output is replaced, no new split is drawn, and at least 8 GiB of disk
-space is retained. Conversion-only and separate import remain available:
+record. All generated files must match the registered SHA256. Conversion uses
+the fixed splits, creates new output directories and retains at least 8 GiB
+of free space. Conversion-only and separate import remain available:
 
 ```sh
 python scripts/convert_data.py --dataset sar --raw-dir /path/to/json
@@ -72,13 +71,13 @@ python scripts/prepare_data.py --dataset sar --from-dir output/data_conversion/<
 ```
 
 Use the corresponding dataset ID for the other conversions. `--split test`
-converts only a registered split; `--limit 10` is a diagnostic subset, not a
-complete dataset. Inspect sample identities and group-disjoint splits with
+converts a registered split; `--limit 10` selects a diagnostic subset.
+Inspect sample identities and group-disjoint splits with
 `python scripts/convert_data.py --dataset sar --audit`.
 
 OpenSAR conversion retains the TIFF-first decoder and its grayscale fallback;
 the chosen decoder is recorded per sample. Percentile scaling and resizing
-are model-input operations, not part of the NPY conversion.
+are applied during model-input preparation.
 
 ## Fixed processed inputs
 
@@ -102,8 +101,8 @@ python scripts/prepare_data.py --dataset fusar --from-dir /path/to/FUSAR-Ship/re
 ```
 
 Files are copied into `data/processed/<dataset>/` only after matching their
-registered hashes. Existing valid files are reused; mismatched files are not
-overwritten. Check the prepared evaluation inputs without changing files:
+registered hashes. Existing matching files are reused; mismatches stop
+preparation. Check the prepared evaluation inputs:
 
 ```sh
 python scripts/prepare_data.py --dataset sar --split test --check
@@ -119,7 +118,7 @@ The archived ImageNet training input transform is in `src/gw/imagenet_data.py`.
 FUSAR training uses the fixed 393-image five-class subset in `fusar_fit.csv`
 (188 train, 48 validation, 157 test), shared with the region-input registry.
 The subset uses this study's fixed group-disjoint split. TIFFs are decoded as grayscale and resized by
-the recorded model-input rule; the files are not converted to SAR NPY arrays.
+the recorded model-input rule.
 
 ## Homogeneous regions
 
@@ -143,7 +142,7 @@ sample set and `region_files.json` checks the original image bytes.
 `configs/region_selection.json` binds the datasets and `src/gw/region_selection.py`
 contains the exact thresholds and tie rules. Each run writes a new bank,
 coordinates, image audit and pixel-by-pixel comparison under `output/regions/`.
-Original fitting banks are not replaced. Refit a successfully rebuilt bank:
+Refit a successfully rebuilt bank:
 
 ```sh
 python scripts/refit_distributions.py --dataset sar --region-run sar=output/regions/<run>

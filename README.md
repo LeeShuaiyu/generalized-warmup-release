@@ -50,9 +50,9 @@ Existing matching files are reused; conflicting files stop preparation.
 
 The [asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets)
 contains the result archive and 50 model archive parts, pinned to revision
-`41026c835ed3bc2a2d293a5eb6c951ecb8b69079`.
-During private access, download with an authorized browser session and use
-`--archive` for results or `--packages-dir` for models.
+`b5655af5c6800f9b853fe961a2b0f41aaf5d0eaf`.
+Use the preparation commands to download the selected assets. Local archives
+are supported through `--archive` for results and `--packages-dir` for models.
 
 To inspect the exact files and transfer size without downloading:
 
@@ -131,7 +131,8 @@ The project's original software and associated software documentation are
 licensed under the [MIT License](LICENSE). Third-party code and dependencies
 retain their applicable licenses and notices.
 
-Model/result asset licensing is listed in [Downloads](docs/DOWNLOADS.md).
+Contributor-owned model weights use MIT. Original numerical result data use
+CC BY 4.0. See [Licenses](LICENSES.md) for file scope and attribution.
 Third-party materials retain their [applicable terms](docs/THIRD_PARTY.md).
 
 ## Citation

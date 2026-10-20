@@ -1,8 +1,8 @@
 # Downloads
 
 The result ZIP and all 50 experiment-specific model TAR archives are stored
-in [the asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets/tree/41026c835ed3bc2a2d293a5eb6c951ecb8b69079)
-at fixed revision `41026c835ed3bc2a2d293a5eb6c951ecb8b69079`.
+in [the asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets/tree/b5655af5c6800f9b853fe961a2b0f41aaf5d0eaf)
+at fixed revision `b5655af5c6800f9b853fe961a2b0f41aaf5d0eaf`.
 Preparation checks archive size/SHA256 and extracted file identities before
 installation. Matching files are reused; conflicting files stop preparation.
 
@@ -16,7 +16,7 @@ python scripts/plan_downloads.py --results-only
 python scripts/prepare_results.py
 ```
 
-For private access, download the ZIP with your authorized browser session:
+To import a local result archive:
 
 ```sh
 python scripts/prepare_results.py --archive /path/to/gw-results.zip
@@ -48,12 +48,12 @@ models and reuses a valid cache. Allow space for downloaded archives, extracted
 models and a temporary copy of the largest file, plus an 8 GiB reserve.
 The preparation commands support APFS, NTFS, Linux filesystems and exFAT.
 
-For private access, obtain the listed parts in the authorized browser, keep
-them together, and pass `--packages-dir /path/to/model-parts`.
+For offline preparation, keep the listed parts together and pass
+`--packages-dir /path/to/model-parts`.
 
 ## Public-access check
 
-Once public access has been separately approved and enabled:
+Verify anonymous access to the fixed version:
 
 ```sh
 python scripts/check_public_downloads.py
@@ -66,5 +66,7 @@ Provider images are obtained separately under [their terms](../data/README.md).
 
 ## Asset licensing
 
-Model and result archive licensing is pending author confirmation.
+Contributor-owned model weights use [MIT](../LICENSE-MODELS). Original
+numerical result data use [CC BY 4.0](../LICENSE-RESULTS). File scope and
+attribution are listed in [Licenses](../LICENSES.md).
 Provider materials retain their applicable terms in [Third-party materials](THIRD_PARTY.md).

@@ -8,9 +8,19 @@ from pathlib import Path
 
 
 class HTTPSRedirect(urllib.request.HTTPRedirectHandler):
+    def __init__(self):
+        super().__init__()
+        self.linked_headers = {}
+
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         if urllib.parse.urlsplit(newurl).scheme != 'https':
             raise ValueError('Refusing a non-HTTPS redirect')
+        for name in ('X-Linked-Etag', 'X-Linked-Size'):
+            value = headers.get(name)
+            if value is not None:
+                if name in self.linked_headers and self.linked_headers[name] != value:
+                    raise ValueError('Conflicting archive identity across redirects')
+                self.linked_headers[name] = value
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
@@ -18,9 +28,17 @@ def open_anonymous(url, method='GET'):
     if urllib.parse.urlsplit(url).scheme != 'https':
         raise ValueError('Anonymous checks require HTTPS')
     # Fresh opener: no cookie jar, account configuration or Authorization header.
-    opener = urllib.request.build_opener(HTTPSRedirect())
+    redirect = HTTPSRedirect()
+    opener = urllib.request.build_opener(redirect)
     try:
-        return opener.open(urllib.request.Request(url, method=method), timeout=30)
+        response = opener.open(urllib.request.Request(url, method=method), timeout=30)
+        for name, value in redirect.linked_headers.items():
+            if response.headers.get(name) not in (None, value):
+                response.close()
+                raise ValueError('Conflicting archive identity at download endpoint')
+            if response.headers.get(name) is None:
+                response.headers[name] = value
+        return response
     except urllib.error.HTTPError as error:
         code = error.code
         error.close()
@@ -56,8 +74,10 @@ def check(root):
         with open_anonymous(url, 'HEAD') as response:
             headers = response.headers
             size = headers.get('X-Linked-Size', headers.get('Content-Length', ''))
+            final_size = headers.get('Content-Length', '')
             digest = headers.get('X-Linked-Etag', headers.get('ETag', '')).strip('"')
             if (response.status != 200 or str(size) != str(row['bytes']) or
+                    str(final_size) != str(row['bytes']) or
                     digest != row['sha256']):
                 raise ValueError('Anonymous remote size/SHA256 not established: ' + row['file'])
         verified.append(dict(file=row['file'], bytes=row['bytes'], sha256=row['sha256']))

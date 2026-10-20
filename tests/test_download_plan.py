@@ -110,3 +110,38 @@ class PublicGate(unittest.TestCase):
         request = urllib.request.Request('https://huggingface.co/example/resolve/revision/file')
         with self.assertRaises(ValueError):
             HTTPSRedirect().redirect_request(request, None, 302, '', {}, 'http://example.org/file')
+
+    def test_xet_redirect_keeps_hf_sha256_and_size(self):
+        catalog = json.loads((ROOT/'artifacts/downloads.json').read_text())
+        parts = json.loads((ROOT/'artifacts/model_packages.json').read_text())['parts']
+        expected = [catalog['results'], *parts]
+        owner = self
+        def opener(handler):
+            class Opener:
+                def open(self, request, timeout):
+                    if request.get_method() == 'GET':
+                        return owner.response(json.dumps(dict(private=False, sha=catalog['hosting']['revision'])).encode())
+                    row = next(r for r in expected if request.full_url.endswith('/'+r['file']))
+                    handler.redirect_request(request, None, 302, '',
+                        {'X-Linked-Etag':'"'+row['sha256']+'"', 'X-Linked-Size':str(row['bytes'])},
+                        'https://cdn.example.org/xet-object')
+                    return owner.response(headers={'Content-Length':str(row['bytes']), 'ETag':'"xet-object-identity"'})
+            return Opener()
+        with patch('gw.public_downloads.urllib.request.build_opener', side_effect=opener):
+            self.assertEqual(check(self.root)['formal_files'], 51)
+
+    def test_final_size_must_match_linked_size(self):
+        catalog = json.loads((ROOT/'artifacts/downloads.json').read_text())
+        row = catalog['results']
+        replies = [self.response(json.dumps(dict(private=False,sha=catalog['hosting']['revision'])).encode()),
+                   self.response(headers={'Content-Length':'1','X-Linked-Size':str(row['bytes']),
+                                          'X-Linked-Etag':'"'+row['sha256']+'"'})]
+        with patch('gw.public_downloads.open_anonymous',side_effect=replies):
+            with self.assertRaises(ValueError): check(self.root)
+
+    def test_conflicting_redirect_identities_are_rejected(self):
+        handler = HTTPSRedirect()
+        request = urllib.request.Request('https://example.org/file')
+        handler.redirect_request(request,None,302,'',{'X-Linked-Etag':'first'},'https://cdn.example.org/file')
+        with self.assertRaises(ValueError):
+            handler.redirect_request(request,None,302,'',{'X-Linked-Etag':'second'},'https://cdn.example.org/file')

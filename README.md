@@ -2,6 +2,12 @@
 
 **Generalized warm-up for confidence calibration of deep neural network classifiers**
 
+[![Models: Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/kanadelsy/generalized-warmup-assets)
+[![Results: 305 MB](https://img.shields.io/badge/Results-305%20MB-2EA44F?style=flat-square)](docs/DOWNLOADS.md#results)
+[![Notebooks: Jupyter](https://img.shields.io/badge/Notebooks-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)](docs/EXPERIMENTS.md)
+[![Python: 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](docs/ENVIRONMENTS.md)
+[![Code license: MIT](https://img.shields.io/badge/Code-MIT-7500A8?style=flat-square)](LICENSE)
+
 Shuai-Yu Li · Xin-Chao Wang · Yu-Ying Song · Si-Wei Chen
 
 [Overview](#overview) · [Quick start](#quick-start) · [Results and models](#results-and-models) · [Citation](#citation) · [License](#license)

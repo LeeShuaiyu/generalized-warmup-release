@@ -2,6 +2,7 @@
 
 **Generalized warm-up for confidence calibration of deep neural network classifiers**
 
+[![Video overview: 3:12](https://img.shields.io/badge/Video-3%3A12-D94A38?style=flat-square)](#video-overview)
 [![Models: Hugging Face](https://img.shields.io/badge/Models-Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/kanadelsy/generalized-warmup-assets)
 [![Results: 305 MB](https://img.shields.io/badge/Results-305%20MB-2EA44F?style=flat-square)](docs/DOWNLOADS.md#results)
 [![Notebooks: Jupyter](https://img.shields.io/badge/Notebooks-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)](docs/EXPERIMENTS.md)
@@ -10,7 +11,7 @@
 
 Shuai-Yu Li · Xin-Chao Wang · Yu-Ying Song · Si-Wei Chen
 
-[Overview](#overview) · [Quick start](#quick-start) · [Results and models](#results-and-models) · [Citation](#citation) · [License](#license)
+[Overview](#overview) · [Video](#video-overview) · [Quick start](#quick-start) · [Results and models](#results-and-models) · [Citation](#citation) · [License](#license)
 
 ## Overview
 
@@ -24,6 +25,12 @@ model checkpoints and executable notebooks for the paper.
 
 *Method overview. Training-image fluctuation statistics guide input construction;
 uniform-target warm-up precedes supervised learning on labelled data.*
+
+## Video overview
+
+A three-minute visual introduction to confidence calibration and generalized warm-up.
+
+https://github.com/user-attachments/assets/55e696a0-4615-41a3-863f-42b5f4a8aafa
 
 ## Quick start
 

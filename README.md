@@ -11,31 +11,19 @@
 
 Shuai-Yu Li · Xin-Chao Wang · Yu-Ying Song · Si-Wei Chen
 
-[Overview](#overview) · [Video](#video-overview) · [Quick start](#quick-start) · [Results and models](#results-and-models) · [Citation](#citation) · [License](#license)
-
 ## Overview
 
 Generalized warm-up prepares a classifier with uniform targets before supervised
 learning. Its inputs combine a Gaussian base with a statistics-guided component
 constructed from approximately homogeneous regions of training images.
-This repository provides the method implementation, experiment configurations,
-model checkpoints and executable notebooks for the paper.
 
-![Generalized warm-up: fluctuation statistics, input construction and uniform-target warm-up.](assets/submitted/figure4.png)
-
-*Method overview. Training-image fluctuation statistics guide input construction;
-uniform-target warm-up precedes supervised learning on labelled data.*
+![Generalized warm-up workflow](assets/submitted/figure4.png)
 
 ## Video overview
-
-A three-minute visual introduction to confidence calibration and generalized warm-up.
 
 https://github.com/user-attachments/assets/55e696a0-4615-41a3-863f-42b5f4a8aafa
 
 ## Quick start
-
-Use **Python 3.12**. The following commands install the notebook environment,
-download the result archive and open the paper notebooks:
 
 ```sh
 git clone https://github.com/LeeShuaiyu/generalized-warmup-release.git
@@ -47,23 +35,19 @@ python scripts/prepare_results.py
 python -m jupyterlab notebooks/
 ```
 
-On Windows, create the environment with `py -3.12 -m venv .venv` and activate it
-with `.venv\Scripts\activate` in Command Prompt.
+Windows (Command Prompt): `py -3.12 -m venv .venv`, then `.venv\Scripts\activate`.
 
-Run notebook cells to recompute tables from the released predictions and source
-measurements on a CPU. Start with the [random-initialization results](notebooks/main_random.ipynb),
-[ImageNet-initialization results](notebooks/main_pretrained.ipynb), or
-[paper figures](notebooks/paper_figures.ipynb).
+Recompute tables on a CPU from released predictions and source measurements.
+Notebooks: [Random initialization](notebooks/main_random.ipynb) ·
+[ImageNet initialization](notebooks/main_pretrained.ipynb) ·
+[Paper figures](notebooks/paper_figures.ipynb).
 
-See [all experiments](docs/EXPERIMENTS.md), [usage](docs/USAGE.md) and
-[environments](docs/ENVIRONMENTS.md) for additional workflows.
+[All experiments](docs/EXPERIMENTS.md) · [Environments](docs/ENVIRONMENTS.md)
 
 ## Results and models
 
-The [Hugging Face asset repository](https://huggingface.co/kanadelsy/generalized-warmup-assets)
-contains the **305 MB result archive** and **388 model checkpoints in 50 archives**.
-Preparation commands use fixed download versions and verify file sizes and hashes.
-Model downloads can be selected by experiment:
+[Hugging Face](https://huggingface.co/kanadelsy/generalized-warmup-assets):
+results and **388 checkpoints in 50 archives**.
 
 ```sh
 python scripts/plan_downloads.py --experiment s4_family
@@ -71,13 +55,10 @@ python scripts/prepare_assets.py --experiment s4_family \
   --package-index artifacts/model_packages.json --url-index artifacts/model_urls.json
 ```
 
-For checkpoint inference, follow [Usage](docs/USAGE.md#checkpoint-inference)
-and [Data preparation](data/README.md). The [download guide](docs/DOWNLOADS.md)
-covers archive sizes, fixed versions and offline preparation.
+[Inference and training](docs/USAGE.md) · [Data preparation](data/README.md) ·
+[Downloads](docs/DOWNLOADS.md)
 
 ## Citation
-
-Software citation metadata are available in [CITATION.cff](CITATION.cff).
 
 ```bibtex
 @software{li2026generalizedwarmup,
@@ -90,7 +71,7 @@ Software citation metadata are available in [CITATION.cff](CITATION.cff).
 
 ## License
 
-Original software and associated documentation use [MIT](LICENSE).
-Contributor-owned model weights use [MIT](LICENSE-MODELS); original numerical
-result data use [CC BY 4.0](LICENSE-RESULTS). See [license scope and attribution](LICENSES.md)
-and [third-party terms](docs/THIRD_PARTY.md).
+Original code and documentation: [MIT](LICENSE). Contributor-owned weights:
+[MIT](LICENSE-MODELS). Original numerical results: [CC BY 4.0](LICENSE-RESULTS).
+
+[Scope and attribution](LICENSES.md) · [Third-party terms](docs/THIRD_PARTY.md)
